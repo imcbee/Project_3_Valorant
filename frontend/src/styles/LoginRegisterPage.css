@@ -1,0 +1,10 @@
+.background {
+  position: absolute;
+  width: 1920px;
+  height: 1006px;
+  left: 0px;
+  top: 75px;
+
+  background: url(6192217.png);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

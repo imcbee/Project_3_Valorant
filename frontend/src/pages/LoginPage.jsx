@@ -1,3 +1,6 @@
+import React from "react";
+import "../styles/LoginRegisterPage.css";
+
 export default function LoginPage() {
   return (
     <>
