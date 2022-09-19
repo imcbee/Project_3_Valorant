@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require ('bcrypt')
 //const methodOverride = require('method-override')
 
 //middleware
 
 // Model Import
 const Models = require('../models/models.js');
+
 
 // Routes ('/test/:ext')
 
@@ -22,7 +24,7 @@ router.get("/", async (req,res)=>{
 
 router.post('/', async (req, res) => {
     try {
-        const salt = await bcrypt.genSalt(10)
+        const salt = await bcrypt.genSalt(12)
         const passwordHash = await bcrypt.hash(req.body.password, salt)
         req.body.password = passwordHash;
         //console.log(req.body)
