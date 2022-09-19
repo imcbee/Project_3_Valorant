@@ -42,11 +42,11 @@ router.get("/profile/:ext/update", async (req,res) => {
     }
 })
 
-//User Update post
+//User Update put
 router.put('/update', async (req, res) => {
     try {
         res.json(
-        await Models.User.findByIdAndUpdate(req.body._id, {media: req.body.media})
+        await Models.User.findByIdAndUpdate(req.body._id, {avatar: req.body.avatar})
         )
     } catch(err) {
         console.log(err)
