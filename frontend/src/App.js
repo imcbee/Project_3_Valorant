@@ -1,10 +1,20 @@
 
 import './App.css';
+import {Routes, Route, Outlet} from 'react-router-dom'
+import HomePage from './pages/HomePage';
+
+
 
 function App() {
   return (
     <div className="App">
-      <h1>working</h1>
+      
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+
+      </Routes>
+      
+      
     </div>
   );
 }
