@@ -6,20 +6,29 @@ const Schema = mongoose.Schema;
 //---User
 
 const userSchema = new Schema ({
-    name: {String, required: true },
-    media: {String}, 
-    email: {String, required: true},
+    username: {String, required: true, unique: true },
     password: {String, required: true}, 
+    email: {String, required: true},
+    media: {String}, 
     groups: [{type: mongoose.Types.ObjectId, ref: 'Group', default: null},], 
     comments: [{type: mongoose.Types.ObjectId, ref: 'Comment', default: null},],
     //
+},{
+    timestamps: true,
+    toJSON: {
+        virtuals: true,
+        transform: (_doc, ret) => {
+            delete ret.password
+            return ret
+        }
+    }
 })
 
 //---Groups
 const groupSchema = new Schema ({
     name: {String, required: true, default: 'Name ur grp'},
     profilepic: {type: String}, //URL or upload
-    admin : {type: mongoose.Types.ObjectId, required: true, ref: 'User'},
+    owner : {type: mongoose.Types.ObjectId, required: true, ref: 'User'},
     players : [{type: mongoose.Types.ObjectId, required: true, ref: 'User'},],
 })
 //---Comments
