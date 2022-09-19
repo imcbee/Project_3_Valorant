@@ -7,6 +7,7 @@ const bcrypt = require ('bcrypt')
 
 // Model Import
 const Models = require('../models/models.js');
+const {createUserToken} = require('../middleware/auth')
 
 
 // Routes ('/test/:ext')
@@ -20,7 +21,7 @@ router.get("/", async (req,res)=>{
     }
 })
 
-// User Create
+// AUTH REGISTER ROUTE (CREATE - POST -> generate a model instance in the db -> create a token)
 
 router.post('/', async (req, res) => {
     try {

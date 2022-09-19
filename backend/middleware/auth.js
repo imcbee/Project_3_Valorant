@@ -9,7 +9,7 @@ const User = require('../models/models')
 const secret = process.env.JWT_SECRET || 'ilovecodingya'
 
 const opts = {
-  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: secret
 }
 
@@ -50,4 +50,7 @@ module.exports = {
   createUserToken
 }
 
+
+console.log(Strategy)
+console.log(ExtractJwt)
 
