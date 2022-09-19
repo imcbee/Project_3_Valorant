@@ -1,2 +1,2 @@
-# Project_3_Valorant
+# General Assembly Project 3: Valorant App
 
