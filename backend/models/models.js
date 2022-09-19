@@ -8,7 +8,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema ({
     username: {type: String, required: true, unique: true },
     password: {type: String, required: true}, 
-    email: {type: String, required: true},
+    email: {type: String, required: true, unique: true},
     media: {type: String}, 
     groups: [{type: mongoose.Types.ObjectId, ref: 'Group', default: null},], 
     comments: [{type: mongoose.Types.ObjectId, ref: 'Comment', default: null},],

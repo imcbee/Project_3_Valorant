@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require ('bcrypt')
-//const methodOverride = require('method-override')
+const bcrypt = require ('bcrypt');
+const methodOverride = require('method-override')
 
 //middleware
 
@@ -13,29 +13,48 @@ const {createUserToken} = require('../middleware/auth')
 // Routes ('/test/:ext')
 
 // Users Index
-router.get("/", async (req,res)=>{
+router.get("/users", async (req,res)=>{
     try{
-        
+        userIndex = await Models.User.find();
+        res.send(userIndex)
     } catch(err){
+        console.log(err)
+    }
+})
+
+//User Show 
+router.get("/profile/:ext", async (req, res) => {
+    try {
+        user = await Models.User.findById(req.params.ext)
+        res.send("this works")
+    } catch(err) {
+        console.log(err)
+    }
+})
+
+//User update page
+router.get("/profile/:ext/update", async (req,res) => {
+    try {
+        user = await Models.User.findById(req.params.ext)
+        res.send("this works 2")
+    } catch(err) {
+        console.log(err)
+    }
+})
+
+//User Update post
+router.put('/update', async (req, res) => {
+    try {
+        res.json(
+        await Models.User.findByIdAndUpdate(req.body._id, {media: req.body.media})
+        )
+    } catch(err) {
         console.log(err)
     }
 })
 
 // AUTH REGISTER ROUTE (CREATE - POST -> generate a model instance in the db -> create a token)
 
-router.post('/', async (req, res) => {
-    try {
-        const salt = await bcrypt.genSalt(12)
-        const passwordHash = await bcrypt.hash(req.body.password, salt)
-        req.body.password = passwordHash;
-        //console.log(req.body)
-        const newUser = await Models.User.create(req.body);
-
-        res.status(200).json({message: "hitting auth register"})
-    } catch(err) {
-        res.status(400).json({error: err.message})
-    }
-})
 
 // User Show
 
