@@ -13,7 +13,7 @@ const authController = require('./controllers/auth_controller')
 mongoose.connect(MONGODB_URI);
 
 // Middleware
-// app.use(express.json());
+app.use(express.json());
 // app.use(cors());
 // app.use(morgan("dev"));
 app.use('/test', testController);

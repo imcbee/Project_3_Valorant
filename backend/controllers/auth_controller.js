@@ -20,10 +20,11 @@ const {createUserToken} = require('../middleware/auth')
 // AUTH REGISTER ROUTE (CREATE - POST -> generate a model instance in the db -> create a token)
 router.post("/register", async (req, res) => {
   try{
+    console.log("testing: ", req.body)
     const salt = await bcrypt.genSalt(10)
     const passwordHash = await bcrypt.hash(req.body.password, salt)
     req.body.password = passwordHash
-    console.log(req.body)
+    console.log("testing: ", req.body)
     const newUser = await User.create(req.body)
     // what happens if null is return 
     // mongoose - virtuals -> remove password from returned JSON
