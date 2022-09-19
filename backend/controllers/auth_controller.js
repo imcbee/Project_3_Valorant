@@ -37,8 +37,8 @@ router.post("/register", async (req, res) => {
 // AUTH LOGIN ROUTE (POST - create token if credentials match)
 router.post("/login", async (req, res) => {
     try{
-        const logggingUser = req.body.username
-        const foundUser = await User.findOne({username: logggingUser})
+        const loggingUser = req.body.username
+        const foundUser = await User.findOne({username: loggingUser})
         const token = await createUserToken(req, foundUser)
         console.log("created token:", token)
         res.status(200).json({user: foundUser, isLoggedIn: true, token})
