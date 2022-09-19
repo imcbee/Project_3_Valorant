@@ -53,16 +53,15 @@ router.put('/update', async (req, res) => {
     }
 })
 
-// AUTH REGISTER ROUTE (CREATE - POST -> generate a model instance in the db -> create a token)
-
-
-// User Show
-
-
-// User Update
-
-
-// User Delete
-
+//User Delete req
+router.delete('/delete', async (req, res) => {
+    try {
+        res.json(
+        await Models.User.findByIdAndDelete(req.body._id)
+        )
+    } catch(err) {
+        console.log(err)
+    }
+})
 
 module.exports = router;
