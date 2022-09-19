@@ -16,8 +16,14 @@ const { PORT, MONGODB_URI } = process.env;
 // app.use(morgan("dev"));
 
 // Routes
+
 app.get("/", (req, res) => {
   res.send("Hello world");
+});
+
+app.get("/:ext", (req, res) => {
+  //res.send("Hello world");
+  res.redirect("/test/:ext")
 });
 
 app.listen(PORT, () => {
