@@ -30,6 +30,7 @@ router.get("/:id", async (req, res) => {
     res.status(400).json(error);
   }
 });
+
 //Group Update
 router.put("/:id", async (req, res) => {
   try {
@@ -40,6 +41,7 @@ router.put("/:id", async (req, res) => {
     res.status(400).json(error);
   }
 });
+
 // Group Delete
 router.delete("/:id", async (req, res) => {
   try {
