@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /* NavBar Styles */
-
+body {
+  background: rgba(15, 25, 35, 1);
+  display: flex;
+}
 .v3_5 {
   width: 100%;
   height: 100px;
@@ -15,6 +18,13 @@
 .navbar {
   display: flex;
   flex-direction: row;
+}
+.nav {
+  font-size: 24px;
+  margin: 10px;
+  text-decoration: none;
+  color: aliceblue;
+  margin-top: 40px;
 }
 .image {
   width: 35px;
@@ -42,10 +52,20 @@
   opacity: 1;
   position: absolute;
   top: 33px;
-  left: 1323px;
+  left: 1723px;
+  overflow: hidden;
+  z-index: 99;
+}
+.v7_36 {
+  width: 54px;
+  height: 43px;
+  background: rgba(255, 70, 85, 1);
+  opacity: 1;
+  position: absolute;
+  top: 28px;
+  left: 1714px;
   overflow: hidden;
 }
-
 .v3_4 {
   width: 100%;
   height: 1081px;
@@ -154,8 +174,8 @@
 }
 .v3_15 {
   width: 465px;
-  height: 72px;
-  background: rgba(249, 249, 249, 1);
+  height: 62px;
+  background: rgb(250, 250, 250);
   font-size: 24px;
   opacity: 1;
   position: absolute;
@@ -168,6 +188,9 @@
   border-bottom-right-radius: 20px;
   overflow: hidden;
   text-indent: 40px;
+}
+.v3_15:hover {
+  background: white;
 }
 input:focus {
   outline: none !important;
@@ -184,40 +207,11 @@ input:focus {
   opacity: 1;
   text-align: left;
 }
-.v7_36 {
-  width: 54px;
-  height: 43px;
-  background: rgba(255, 70, 85, 1);
-  opacity: 1;
-  position: absolute;
-  top: 28px;
-  left: 1314px;
-  overflow: hidden;
-}
 
 .banner {
   background: url("../images/Valorant-typography.png");
 }
-/* .v5_26 {
-  width: 35px;
-  height: 35px;
-  background: rgba(255, 70, 85, 1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-} */
-/* .v5_27 {
-  width: 34px;
-  height: 28px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 3px;
-  left: 1px;
-} */
-.button {
+.v7_38 {
   width: 334px;
   height: 37px;
   background: rgba(255, 70, 85, 1);
@@ -229,7 +223,12 @@ input:focus {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-color: transparent;
   overflow: hidden;
+  z-index: 99;
+  color:rgba(255, 255, 255, 1);
+  font-weight: bold;
+  font-size: 15.7px;
 }
 .v7_39 {
   width: 130px;
@@ -246,28 +245,21 @@ input:focus {
 .v7_43 {
   width: 336px;
   height: 65px;
-  background: rgba(158, 128, 244, 0.2800000011920929);
+  background: rgba(70, 70, 70, 0.678);
   opacity: 1;
   position: absolute;
-  top: 660px;
-  left: 286px;
+  top: 690px;
+  left: 766px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
 }
-.v7_42 {
-  width: 275px;
-  color: rgba(255, 255, 255, 1);
-  position: absolute;
-  top: 660px;
-  left: 324px;
-  font-family: Kanit;
-  font-weight: Medium;
-  font-size: 42px;
-  opacity: 1;
-  text-align: left;
+.v7_43 span {
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 40px;
 }
 .v7_46 {
   width: 392px;
@@ -276,7 +268,7 @@ input:focus {
   top: 347px;
   left: 170px;
   font-family: 'Bebas Neue', cursive;
-  font-size: 42px;
+  font-size: 45px;
   opacity: 1;
   text-align: left;
 }
