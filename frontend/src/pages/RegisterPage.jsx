@@ -28,12 +28,13 @@ export default function RegisterPage({ signUp }) {
     <>
       <Header />
       <div className="Register">
-        <h1>Registration</h1>
+      <div class="reg-card-test">
+      <span id="reg">Register</span><br></br>
         <div className="Register-Form">
           <form onSubmit={handleSubmit}>
             <label>
               <span>Username</span>
-              <input
+              <input id="rg"
                 type="text"
                 required
                 name="username"
@@ -44,7 +45,7 @@ export default function RegisterPage({ signUp }) {
             </label>
             <label>
               <span>Email</span>
-              <input
+              <input id="rg"
                 type="text"
                 required
                 name="email"
@@ -55,7 +56,7 @@ export default function RegisterPage({ signUp }) {
             </label>
             <label>
               <span>Password</span>
-              <input
+              <input id="rg"
                 type="text"
                 required
                 name="password"
@@ -66,7 +67,7 @@ export default function RegisterPage({ signUp }) {
             </label>
             <label>
               <span>Avatar</span>
-              <input
+              <input id="rg"
                 type="text"
                 required
                 name="avatar"
@@ -79,6 +80,7 @@ export default function RegisterPage({ signUp }) {
               Register
             </button>
           </form>
+        </div>
         </div>
       </div>
       <Footer />

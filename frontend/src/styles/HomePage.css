@@ -333,3 +333,10 @@ input:focus {
   margin-top: 30px;
   margin-left: 90px;
 }
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+a:hover {
+  color: rgb(224, 225, 226);
+}
