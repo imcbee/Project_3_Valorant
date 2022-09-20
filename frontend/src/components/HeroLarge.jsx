@@ -7,7 +7,7 @@ export default function HeroLarge() {
                 <p>Check Detailed Valorant Stats and Leaderboards</p>
                 <img src="/images/Neon_Hero.webp"></img>
             </div> */}
-
+      
       <div class="v3_7"></div>
       <div class="v3_8"></div>
       <div class="v3_9"></div>
