@@ -1,5 +1,10 @@
+import { useState } from "react";
+
 export default function RegisterPage({}) {
-  // need to bring in data for a user state for user Auth
+  const [registerForm, setRegisterForm] = useState();
+
+  const handleChange = (e) => {};
+  const handleSubmit = () => {};
   return (
     <>
       <div className="Register">
