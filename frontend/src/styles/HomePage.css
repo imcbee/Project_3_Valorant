@@ -122,11 +122,11 @@
 .v3_7 {
   width: 100%;
   height: 689px;
-  background: url("../images/v3_7.png");
+  background: url("../images/hero_update.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
-  background-position: 0% 20%;
+  background-size: 135%;
+  background-position: 0% 33%;
   opacity: 1;
   position: absolute;
   top: 100px;
@@ -136,7 +136,7 @@
 .v3_8 {
   width: 100%;
   height: 294px;
-  background: rgba(27, 23, 47, 1);
+  background: rgba(15, 25, 35, 1);
   opacity: 1;
   position: absolute;
   top: 787px;
@@ -150,7 +150,6 @@
   opacity: 1;
   position: absolute;
   top: 97px;
-  left: 8px;
   overflow: hidden;
 }
 .v3_15 {
