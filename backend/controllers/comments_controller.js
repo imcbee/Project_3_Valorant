@@ -22,4 +22,32 @@ router.post("/", async (req, res) => {
     res.status(400).json(error);
   }
 });
+
+// Comment Show
+router.get("/:id", async (req, res) => {
+  try {
+    res.json(await Comment.findById(req.params.id));
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+// Comment Update
+router.put("/:id", async (req, res) => {
+  try {
+    res.json(
+      await Comment.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    );
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+// Comment Delete
+router.delete("/:id", async (req, res) => {
+  try {
+    res.json(await Comment.findByIdAndRemove(req.params.id));
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
 module.exports = router;
