@@ -11,7 +11,7 @@ export default function Main({ signup, isLoggedIn, login, user }) {
       <Outlet />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage login={login} />} />
         <Route path="/register" element={<RegisterPage signUp={signup} />} />
         <Route path="/comment/:id" element={<EditComment />} />
       </Routes>

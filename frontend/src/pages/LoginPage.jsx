@@ -1,19 +1,22 @@
 import React from "react";
 import "../styles/LoginRegisterPage.css";
+import Header from "../components/Header";
 
-export default function LoginPage() {
+export default function LoginPage({ login }) {
   //create useState to access login for the
+
   return (
     <>
+      <Header />
       <div className="Login">
         <div className="Login-Form">
           <form onSubmit="">
             <label>
-              <span>Username</span>
+              <span>Email</span>
               <input
                 type="text"
                 required
-                name="username"
+                name="email"
                 placeholder="Enter username"
                 onChange=""
                 value=""
