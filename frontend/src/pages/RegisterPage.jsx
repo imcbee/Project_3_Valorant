@@ -1,8 +1,9 @@
-export default function RegisterPage() {
-  // need to bring in data for a user state
+export default function RegisterPage({}) {
+  // need to bring in data for a user state for user Auth
   return (
     <>
       <div className="Register">
+        <h1>Registreation</h1>
         <div className="Register-Form">
           <form onSubmit="">
             <label>
@@ -49,7 +50,9 @@ export default function RegisterPage() {
                 value=""
               />
             </label>
-            <button type="submit" value="" />
+            <button type="submit" value="">
+              Register
+            </button>
           </form>
         </div>
       </div>
