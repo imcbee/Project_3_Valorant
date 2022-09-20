@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /* NavBar Styles */
 body {
@@ -244,22 +245,26 @@ input:focus {
 }
 .v7_43 {
   width: 336px;
-  height: 65px;
+  height: 60px;
   background: rgba(70, 70, 70, 0.678);
   opacity: 1;
   position: absolute;
-  top: 690px;
+  top: 660px;
   left: 766px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(12.8px);
+  border: 1px solid rgba(207, 207, 207, 0.144);
 }
 .v7_43 span {
   color: aliceblue;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 38px;
 }
 .v7_46 {
   width: 392px;
@@ -408,7 +413,51 @@ input:focus {
 .player-card {
   height: 325px;
   width: 300px;
-  transform: translate(70%, 190%);
+  transform: translate(70%, 193%);
+  /* From https://css.glass */
+  background: rgba(202, 193, 207, 0.2);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(12.8px);
+ -webkit-backdrop-filter: blur(12.8px);
+ border: 1px solid rgba(210, 196, 231, 0.212);
+ color: aliceblue;
+}
+.player-card:hover, .player-card2:hover, .player-card3:hover, .player-card4:hover {
+  background: rgba(177, 158, 187, 0.2);
+}
+.player-card2 {
+  height: 325px;
+  width: 300px;
+  transform: translate(180%, 93%);
+  /* From https://css.glass */
+  background: rgba(202, 193, 207, 0.2);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(12.8px);
+ -webkit-backdrop-filter: blur(12.8px);
+ border: 1px solid rgba(255, 255, 255, 0.212);
+ color: aliceblue;
+ position: absolute;
+}
+.player-card3 {
+  height: 325px;
+  width: 300px;
+  transform: translate(290%, 93%);
+  /* From https://css.glass */
+  background: rgba(202, 193, 207, 0.2);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(12.8px);
+ -webkit-backdrop-filter: blur(12.8px);
+ border: 1px solid rgba(255, 255, 255, 0.212);
+ color: aliceblue;
+ position: absolute;
+}
+.player-card4 {
+  height: 325px;
+  width: 300px;
+  transform: translate(400%, 93%);
   /* From https://css.glass */
  background: rgba(202, 193, 207, 0.2);
  border-radius: 16px;
@@ -417,4 +466,24 @@ input:focus {
  -webkit-backdrop-filter: blur(12.8px);
  border: 1px solid rgba(255, 255, 255, 0.212);
  color: aliceblue;
+ position: absolute;
+}
+.pfp {
+  background-image: url("https://i.imgur.com/Y2aHGkv.png");
+  background-size: 140px;
+  background-position-y: -27px;
+  background-position-x: -7px;
+  width: 120px;
+  height: 120px;
+  background-color: lightslategray;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-left: 90px;
+}
+.header {
+  padding: 10px;
+  margin-left: 30px;
+}
+.nav span {
+  font-family: 'Bebas Neue', cursive;
 }

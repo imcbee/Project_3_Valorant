@@ -7,10 +7,8 @@ export default function Header() {
     <div className="header">
       <div class="v3_5">
         <nav className="navbar">
-          <Link to="/">
-            <img src="../images/Valorant-typography.png" alt="" />
-            {/* <div className="image"></div> */}
-            <span class="">VAL.HALLA</span>
+          <Link to="/" className="nav">
+            <span>VAL.HALLA</span>
           </Link>
           <Link className="nav">
             Login
