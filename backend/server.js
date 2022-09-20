@@ -30,6 +30,6 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-app.listen( MONGODB_URI || PORT, () => {
+app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
