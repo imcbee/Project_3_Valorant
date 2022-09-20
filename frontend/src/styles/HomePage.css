@@ -5,8 +5,9 @@
 body {
   background: rgba(15, 25, 35, 1);
   display: flex;
+  padding-bottom: 30px;
 }
-.v3_5 {
+.navi {
   width: 100%;
   height: 100px;
   background: rgba(15, 25, 35, 1);
@@ -26,11 +27,6 @@ body {
   text-decoration: none;
   color: aliceblue;
   margin-top: 40px;
-}
-.image {
-  width: 35px;
-  height: 35px;
-  background: url("../images/Valorant-typography.png");
 }
 .navbar span {
   width: 142px;
@@ -67,6 +63,14 @@ body {
   left: 1714px;
   overflow: hidden;
 }
+.header {
+  padding: 10px;
+  margin-left: 30px;
+}
+.nav span {
+  font-family: 'Bebas Neue', cursive;
+}
+/* main page */
 .v3_4 {
   width: 100%;
   height: 1081px;
@@ -81,45 +85,6 @@ body {
   position: absolute;
   top: 28px;
   left: 115px;
-}
-.v48_4 {
-  width: 298px;
-  height: 47px;
-  /* background: url("../images/v48_4.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 24px;
-  left: 158px;
-  overflow: hidden;
-}
-.v48_3 {
-  width: 298px;
-  height: 47px;
-  /* background: url("../images/v48_3.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-.v7_45 {
-  width: 298px;
-  height: 47px;
-  /* background: url("../images/v7_45.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
 }
 .v5_34 {
   width: 8px;
@@ -140,6 +105,7 @@ body {
   top: 0px;
   left: 0px;
 }
+/* hero section */
 .v3_7 {
   width: 100%;
   height: 689px;
@@ -173,6 +139,7 @@ body {
   top: 97px;
   overflow: hidden;
 }
+/* input */
 .v3_15 {
   width: 465px;
   height: 62px;
@@ -207,10 +174,6 @@ input:focus {
   font-size: 24px;
   opacity: 1;
   text-align: left;
-}
-
-.banner {
-  background: url("../images/Valorant-typography.png");
 }
 .v7_38 {
   width: 334px;
@@ -287,45 +250,6 @@ input:focus {
   opacity: 1;
   text-align: left;
 }
-.v7_53 {
-  width: 422px;
-  height: 349px;
-  /* background: url("../images/v7_53.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 731px;
-  left: 863px;
-  overflow: hidden;
-}
-.v7_57 {
-  width: 350px;
-  height: 335px;
-  /* background: url("../images/v7_57.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 746px;
-  left: 236px;
-  overflow: hidden;
-}
-.v7_56 {
-  width: 452px;
-  height: 344px;
-  /* background: url("../images/v7_56.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 737px;
-  left: 127px;
-  overflow: hidden;
-}
 .v7_58 {
   width: 197px;
   color: rgba(255, 255, 255, 1);
@@ -338,78 +262,7 @@ input:focus {
   opacity: 1;
   text-align: left;
 }
-.v7_59 {
-  width: 197px;
-  color: rgba(255, 255, 255, 1);
-  /* position: absolute; */
-  top: 798px;
-  left: 571px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_60 {
-  width: 197px;
-  color: rgba(255, 255, 255, 1);
-  /* position: absolute; */
-  top: 797px;
-  left: 1186px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_62 {
-  width: 69px;
-  color: rgba(181, 180, 180, 1);
-  /* position: absolute; */
-  top: 829px;
-  left: 26px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_63 {
-  width: 156px;
-  color: rgba(181, 180, 180, 1);
-  /* position: absolute; */
-  top: 828px;
-  left: 571px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_64 {
-  width: 108px;
-  color: rgba(181, 180, 180, 1);
-  /* position: absolute; */
-  top: 827px;
-  left: 1186px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v16_2 {
-  width: 30px;
-  color: rgba(255, 255, 255, 1);
-  /* position: absolute; */
-  top: 531px;
-  left: 126px;
-  font-family: Kanit;
-  font-weight: Regular;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
+/* leaderboard */
 .player-card {
   height: 325px;
   width: 300px;
@@ -479,11 +332,4 @@ input:focus {
   border-radius: 50%;
   margin-top: 30px;
   margin-left: 90px;
-}
-.header {
-  padding: 10px;
-  margin-left: 30px;
-}
-.nav span {
-  font-family: 'Bebas Neue', cursive;
 }

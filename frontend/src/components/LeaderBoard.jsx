@@ -2,7 +2,7 @@ export default function LeaderBoard() {
   // map out all of the valorant
 
   return (
-    <container class="leader">
+    <div class="leader">
         <div class="player-card">
           <div class="pfp"></div>
            <h2>Player #ttv</h2>
@@ -23,6 +23,6 @@ export default function LeaderBoard() {
            <h2>Player #ttv</h2>
            <h3>Rank 1 | 1000 RR</h3>
         </div>
-      </container>
+      </div>
   );
 }
