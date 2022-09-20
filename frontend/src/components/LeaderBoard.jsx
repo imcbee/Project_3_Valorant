@@ -2,14 +2,19 @@ export default function LeaderBoard() {
   // map out all of the valorant
 
   return (
-    <div class="v7_57">
-      <span class="v7_58">46.7% Win Rate</span>
-      <span class="v7_59">43.5% Win Rate</span>
-      <span class="v7_60">49.7% Win Rate</span>
-      <span class="v7_62">JETT</span>
-      <span class="v7_63">CHAMBER</span>
-      <span class="v7_64">VIPER</span>
-      <span class="v16_2">or</span>
-    </div>
+    /*
+    <div class="background">
+        <div class="card">
+            <img src=
+"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"
+                alt="image" />
+            <h2>Player #ttv</h2>
+            <h3>Rank 1 | 1000 RR</h3>
+            <div class='blur'></div>
+        </div> */
+        <div class="player-card">
+           <h2>Player #ttv</h2>
+           <h3>Rank 1 | 1000 RR</h3>
+        </div>       
   );
 }
