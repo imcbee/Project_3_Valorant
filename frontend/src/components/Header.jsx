@@ -12,17 +12,17 @@ export default function Header() {
             {/* <div className="image"></div> */}
             <span class="">VAL.HALLA</span>
           </Link>
-          <Link>
-            <span class="">Login</span>
+          <Link className="nav">
+            Login
           </Link>
-          <Link>
-            <span class="">Register</span>
+          <Link className="nav">
+            Register
           </Link>
-          <Link>
-            <span class="">User Group</span>
+          <Link className="nav">
+            User Group
           </Link>
-          <Link>
-            <span class="">Player Page</span>
+          <Link className="nav">
+            Player Page
           </Link>
         </nav>
 
