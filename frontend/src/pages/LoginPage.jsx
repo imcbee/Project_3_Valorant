@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/LoginRegisterPage.css";
 
 export default function LoginPage() {
+  //create useState to access login for the
   return (
     <>
       <div className="Login">
@@ -29,7 +30,9 @@ export default function LoginPage() {
                 value=""
               />
             </label>
-            <button type="submit" value="" />
+            <button type="submit" value="">
+              Login
+            </button>
           </form>
         </div>
       </div>

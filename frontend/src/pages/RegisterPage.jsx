@@ -1,16 +1,36 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default function RegisterPage({}) {
-  const [registerForm, setRegisterForm] = useState();
+export default function RegisterPage({ signUp }) {
+  const initialState = { username: "", password: "" };
+  const [input, setInput] = useState(initialState);
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {};
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const createdUserToken = await signUp(input);
+
+    if (createdUserToken) {
+      navigate("/player"); //!need to determine what the player page is
+    } else {
+      navigate("/");
+    }
+    setInput(initialState);
+  };
+
+  const handleChange = (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
+      <Header />
       <div className="Register">
-        <h1>Registreation</h1>
+        <h1>Registration</h1>
         <div className="Register-Form">
-          <form onSubmit="">
+          <form onSubmit={handleSubmit}>
             <label>
               <span>Username</span>
               <input
@@ -18,8 +38,8 @@ export default function RegisterPage({}) {
                 required
                 name="username"
                 placeholder="Enter username"
-                onChange=""
-                value=""
+                onChange={handleChange}
+                value={input.username}
               />
             </label>
             <label>
@@ -29,8 +49,8 @@ export default function RegisterPage({}) {
                 required
                 name="email"
                 placeholder="Enter email"
-                onChange=""
-                value=""
+                onChange={handleChange}
+                value={input.email}
               />
             </label>
             <label>
@@ -40,19 +60,19 @@ export default function RegisterPage({}) {
                 required
                 name="password"
                 placeholder="Enter password"
-                onChange=""
-                value=""
+                onChange={handleChange}
+                value={input.password}
               />
             </label>
             <label>
-              <span>avatar</span>
+              <span>Avatar</span>
               <input
                 type="text"
                 required
                 name="avatar"
                 placeholder="Enter avatar"
-                onChange=""
-                value=""
+                onChange={handleChange}
+                value={input.avatar}
               />
             </label>
             <button type="submit" value="">
@@ -61,6 +81,7 @@ export default function RegisterPage({}) {
           </form>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
