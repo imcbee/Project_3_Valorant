@@ -4,10 +4,22 @@ export default function SideBar() {
   //most use weapons
   //top maps
 
+  const weapon = xxx
+    .filter((item, index) => index < 2)
+    .map((filteredItem) => {
+      return (
+        <div className="weapon-container">
+          <img src={filteredItem.img} alt="" /> //! what are the properties?
+          <span>{filteredItem.name}</span> //! what is the weapon name?
+          <span>{filteredItem.weapon - category}</span>
+        </div>
+      );
+    });
+
   return (
     <div className="Sidebar">
       <div className="current-rating"></div>
-      <div className="weapon"></div>
+      {weapon}
       <div className="maps"></div>
     </div>
   );
