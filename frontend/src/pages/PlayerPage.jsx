@@ -13,12 +13,7 @@ export default function PlayerPage() {
   return (
     <>
       <Header />
-      <HeroSmall />
-      <OptionsNav />
-      <div className="graph-comments-container">
-        <div className="graph"></div>
-        <Comments />
-      </div>
+
       <Footer />
     </>
   );
