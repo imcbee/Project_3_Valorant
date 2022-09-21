@@ -10,13 +10,6 @@ export default function PlayerPage() {
   // do we need to have props sent from Main?
   // show page - map out player  stats
 
-  // Leader player state
-  const [leaderPlayers, setLeaderPlayers] = useState();
-
-  const handleChange = (e) => {
-    setLeaderPlayers({ ...leaderPlayers, [e.target.name]: e.target.value });
-  };
-
   return (
     <>
       <Header />
