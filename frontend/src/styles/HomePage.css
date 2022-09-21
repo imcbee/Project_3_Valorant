@@ -25,7 +25,7 @@ body {
 }
 .nav {
   font-size: 24px;
-  margin: 10px;
+  margin: 12px;
   text-decoration: none;
   color: aliceblue;
   margin-top: 40px;
@@ -37,7 +37,7 @@ body {
   left: 26px;
   font-family: Kanit;
   font-weight: Medium;
-  font-size: 29px;
+  font-size: 30px;
   opacity: 1;
   text-align: left;
 }
@@ -322,4 +322,35 @@ a:hover {
   width: 60px;
   height: 60px;
   border-radius: 22px;
+}
+/* profile page */
+.profile-banner {
+  width: 1918px;
+  height: 18rem;
+  border: 1px solid red;
+}
+.profile-card {
+  height: 200px;
+  width: 200px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(50%, -50%);
+  background-image: url("https://i.imgur.com/Y2aHGkv.png");
+  background-position-y: -60px;
+  background-position-x: -20px;
+}
+.match-cards {
+  height: 180px;
+  width: 1500px;
+  margin: 20px;
+  margin-left: 350px;
+  border-radius: 16px;
+  background: rgba(202, 193, 207, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.8px);
+  -webkit-backdrop-filter: blur(12.8px);
+  border: 1px solid rgba(210, 196, 231, 0.212);
+  color: aliceblue;
 }

@@ -8,7 +8,7 @@ export default function Header() {
       <div class="navi">
         <nav className="navbar">
           <Link to="/" className="nav">
-            <span>VAL.HALLA</span>
+            <span id="val">VAL.HALLA</span>
           </Link>
           <Link to="/login" className="nav">
             Login
