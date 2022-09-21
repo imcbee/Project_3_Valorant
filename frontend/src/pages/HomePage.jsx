@@ -16,6 +16,7 @@ export default function HomePage() {
         <HeroLarge />
         <LeaderBoard />
       </div>
+      <Footer />
     </>
   );
 }

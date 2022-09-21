@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+
 
 /* NavBar Styles */
 body {
@@ -339,4 +341,15 @@ a {
 }
 a:hover {
   color: rgb(224, 225, 226);
+}
+.footer {
+  color: #edededbb;
+  font-family: 'Work Sans', sans-serif;
+  margin: 40px;
+  margin-left: -230px;
+}
+#git {
+  width: 60px;
+  height: 60px;
+  border-radius: 22px;
 }
