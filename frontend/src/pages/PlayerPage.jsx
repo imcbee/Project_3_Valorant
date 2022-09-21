@@ -13,7 +13,9 @@ export default function PlayerPage() {
   return (
     <>
       <Header />
-
+      <div class="profile-banner"></div>
+      <div class="profile-card"></div>
+      <div class="match-cards"></div>
       <Footer />
     </>
   );
