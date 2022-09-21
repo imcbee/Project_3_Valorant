@@ -19,7 +19,7 @@ export default function Header() {
           <Link to="/usergroup" className="nav">
             User Group
           </Link>
-          <Link to="/playerpage" className="nav">
+          <Link to="/player" className="nav">
             Player Page
           </Link>
         </nav>

@@ -265,10 +265,18 @@ input:focus {
   text-align: left;
 }
 /* leaderboard */
+.leaderboard {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+}
 .player-card {
   height: 325px;
   width: 300px;
-  transform: translate(70%, 193%);
+  transform: translate(0%, 193%);
   /* From https://css.glass */
   background: rgba(202, 193, 207, 0.2);
  border-radius: 16px;
@@ -278,50 +286,12 @@ input:focus {
  border: 1px solid rgba(210, 196, 231, 0.212);
  color: aliceblue;
 }
-.player-card:hover, .player-card2:hover, .player-card3:hover, .player-card4:hover {
+h4 {
+  color: rgba(168, 168, 168, 0.932);
+  font-size: 15px;
+}
+.player-card:hover {
   background: rgba(177, 158, 187, 0.2);
-}
-.player-card2 {
-  height: 325px;
-  width: 300px;
-  transform: translate(180%, 93%);
-  /* From https://css.glass */
-  background: rgba(202, 193, 207, 0.2);
- border-radius: 16px;
- box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
- backdrop-filter: blur(12.8px);
- -webkit-backdrop-filter: blur(12.8px);
- border: 1px solid rgba(255, 255, 255, 0.212);
- color: aliceblue;
- position: absolute;
-}
-.player-card3 {
-  height: 325px;
-  width: 300px;
-  transform: translate(290%, 93%);
-  /* From https://css.glass */
-  background: rgba(202, 193, 207, 0.2);
- border-radius: 16px;
- box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
- backdrop-filter: blur(12.8px);
- -webkit-backdrop-filter: blur(12.8px);
- border: 1px solid rgba(255, 255, 255, 0.212);
- color: aliceblue;
- position: absolute;
-}
-.player-card4 {
-  height: 325px;
-  width: 300px;
-  transform: translate(400%, 93%);
-  /* From https://css.glass */
- background: rgba(202, 193, 207, 0.2);
- border-radius: 16px;
- box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
- backdrop-filter: blur(12.8px);
- -webkit-backdrop-filter: blur(12.8px);
- border: 1px solid rgba(255, 255, 255, 0.212);
- color: aliceblue;
- position: absolute;
 }
 .pfp {
   background-image: url("https://i.imgur.com/Y2aHGkv.png");
