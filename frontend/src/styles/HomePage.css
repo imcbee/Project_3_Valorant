@@ -294,7 +294,6 @@ h4 {
   background: rgba(177, 158, 187, 0.2);
 }
 .pfp {
-  background-image: url("https://i.imgur.com/Y2aHGkv.png");
   background-size: 140px;
   background-position-y: -27px;
   background-position-x: -7px;
@@ -304,6 +303,14 @@ h4 {
   border-radius: 50%;
   margin-top: 30px;
   margin-left: 90px;
+}
+.pfp img {
+  background-size: 140px;
+  background-position-y: -27px;
+  background-position-x: -7px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }
 a {
   text-decoration: none;
