@@ -5,23 +5,21 @@ import "../styles/HomePage.css";
 export default function Header() {
   return (
     <div className="header">
-      <div class="v3_5">
+      <div class="navi">
         <nav className="navbar">
-          <Link to="/">
-            <img src="../images/Valorant-typography.png" alt="" />
-            {/* <div className="image"></div> */}
-            <span class="">VAL.HALLA</span>
+          <Link to="/" className="nav">
+            <span id="val">VAL.HALLA</span>
           </Link>
-          <Link className="nav">
+          <Link to="/login" className="nav">
             Login
           </Link>
-          <Link className="nav">
+          <Link to="/register" className="nav">
             Register
           </Link>
-          <Link className="nav">
+          <Link to="/usergroup" className="nav">
             User Group
           </Link>
-          <Link className="nav">
+          <Link to="/player" className="nav">
             Player Page
           </Link>
         </nav>

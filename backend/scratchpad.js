@@ -1,3 +1,16 @@
+async function getLeaderBoard () {
+  let leaderBoard = []
+  try {
+    const response = await fetch('https://api.henrikdev.xyz/valorant/v1/leaderboard/na');
+    leaderBoard = [response[0], response[1], response[3]]
+    return leaderBoard
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+
+
 // homepage.jsx
 
 export default function HomePage() {

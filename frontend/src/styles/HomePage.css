@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+
 
 /* NavBar Styles */
 body {
   background: rgba(15, 25, 35, 1);
   display: flex;
+  padding-bottom: 30px;
 }
-.v3_5 {
+.navi {
   width: 100%;
   height: 100px;
   background: rgba(15, 25, 35, 1);
@@ -21,15 +25,10 @@ body {
 }
 .nav {
   font-size: 24px;
-  margin: 10px;
+  margin: 12px;
   text-decoration: none;
   color: aliceblue;
   margin-top: 40px;
-}
-.image {
-  width: 35px;
-  height: 35px;
-  background: url("../images/Valorant-typography.png");
 }
 .navbar span {
   width: 142px;
@@ -38,7 +37,7 @@ body {
   left: 26px;
   font-family: Kanit;
   font-weight: Medium;
-  font-size: 29px;
+  font-size: 30px;
   opacity: 1;
   text-align: left;
 }
@@ -66,6 +65,14 @@ body {
   left: 1714px;
   overflow: hidden;
 }
+.header {
+  padding: 10px;
+  margin-left: 30px;
+}
+.nav span {
+  font-family: 'Bebas Neue', cursive;
+}
+/* main page */
 .v3_4 {
   width: 100%;
   height: 1081px;
@@ -80,45 +87,6 @@ body {
   position: absolute;
   top: 28px;
   left: 115px;
-}
-.v48_4 {
-  width: 298px;
-  height: 47px;
-  /* background: url("../images/v48_4.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 24px;
-  left: 158px;
-  overflow: hidden;
-}
-.v48_3 {
-  width: 298px;
-  height: 47px;
-  /* background: url("../images/v48_3.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-.v7_45 {
-  width: 298px;
-  height: 47px;
-  /* background: url("../images/v7_45.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
 }
 .v5_34 {
   width: 8px;
@@ -139,6 +107,7 @@ body {
   top: 0px;
   left: 0px;
 }
+/* hero section */
 .v3_7 {
   width: 100%;
   height: 689px;
@@ -166,12 +135,13 @@ body {
 .v3_9 {
   width: 100%;
   height: 690px;
-  background: rgba(17, 16, 16, 0.550000011920929);
+  background: rgba(17, 16, 16, 0.493);
   opacity: 1;
   position: absolute;
   top: 97px;
   overflow: hidden;
 }
+/* input */
 .v3_15 {
   width: 465px;
   height: 62px;
@@ -207,10 +177,6 @@ input:focus {
   opacity: 1;
   text-align: left;
 }
-
-.banner {
-  background: url("../images/Valorant-typography.png");
-}
 .v7_38 {
   width: 334px;
   height: 37px;
@@ -244,22 +210,26 @@ input:focus {
 }
 .v7_43 {
   width: 336px;
-  height: 65px;
+  height: 60px;
   background: rgba(70, 70, 70, 0.678);
   opacity: 1;
   position: absolute;
-  top: 690px;
+  top: 660px;
   left: 766px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(12.8px);
+  border: 1px solid rgba(207, 207, 207, 0.144);
 }
 .v7_43 span {
   color: aliceblue;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 38px;
 }
 .v7_46 {
   width: 392px;
@@ -282,45 +252,6 @@ input:focus {
   opacity: 1;
   text-align: left;
 }
-.v7_53 {
-  width: 422px;
-  height: 349px;
-  /* background: url("../images/v7_53.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 731px;
-  left: 863px;
-  overflow: hidden;
-}
-.v7_57 {
-  width: 350px;
-  height: 335px;
-  /* background: url("../images/v7_57.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 746px;
-  left: 236px;
-  overflow: hidden;
-}
-.v7_56 {
-  width: 452px;
-  height: 344px;
-  /* background: url("../images/v7_56.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 737px;
-  left: 127px;
-  overflow: hidden;
-}
 .v7_58 {
   width: 197px;
   color: rgba(255, 255, 255, 1);
@@ -333,88 +264,100 @@ input:focus {
   opacity: 1;
   text-align: left;
 }
-.v7_59 {
-  width: 197px;
-  color: rgba(255, 255, 255, 1);
-  /* position: absolute; */
-  top: 798px;
-  left: 571px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_60 {
-  width: 197px;
-  color: rgba(255, 255, 255, 1);
-  /* position: absolute; */
-  top: 797px;
-  left: 1186px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_62 {
-  width: 69px;
-  color: rgba(181, 180, 180, 1);
-  /* position: absolute; */
-  top: 829px;
-  left: 26px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_63 {
-  width: 156px;
-  color: rgba(181, 180, 180, 1);
-  /* position: absolute; */
-  top: 828px;
-  left: 571px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v7_64 {
-  width: 108px;
-  color: rgba(181, 180, 180, 1);
-  /* position: absolute; */
-  top: 827px;
-  left: 1186px;
-  font-family: Kanit;
-  font-weight: SemiBold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.v16_2 {
-  width: 30px;
-  color: rgba(255, 255, 255, 1);
-  /* position: absolute; */
-  top: 531px;
-  left: 126px;
-  font-family: Kanit;
-  font-weight: Regular;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
+/* leaderboard */
+.leaderboard {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
 }
 .player-card {
   height: 325px;
   width: 300px;
-  transform: translate(70%, 190%);
+  transform: translate(0%, 193%);
   /* From https://css.glass */
- background: rgba(202, 193, 207, 0.2);
+  background: rgba(202, 193, 207, 0.2);
  border-radius: 16px;
  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
  backdrop-filter: blur(12.8px);
  -webkit-backdrop-filter: blur(12.8px);
- border: 1px solid rgba(255, 255, 255, 0.212);
+ border: 1px solid rgba(210, 196, 231, 0.212);
  color: aliceblue;
+}
+h4 {
+  color: rgba(168, 168, 168, 0.932);
+  font-size: 15px;
+}
+.player-card:hover {
+  background: rgba(177, 158, 187, 0.2);
+}
+.pfp {
+  background-size: 140px;
+  background-position-y: -27px;
+  background-position-x: -7px;
+  width: 120px;
+  height: 120px;
+  background-color: lightslategray;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-left: 90px;
+}
+.pfp img {
+  background-size: 140px;
+  background-position-y: -27px;
+  background-position-x: -7px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+a:hover {
+  color: rgb(224, 225, 226);
+}
+.footer {
+  color: #edededbb;
+  font-family: 'Work Sans', sans-serif;
+  margin: 40px;
+  margin-left: -230px;
+}
+#git {
+  width: 60px;
+  height: 60px;
+  border-radius: 22px;
+}
+/* profile page */
+.profile-banner {
+  width: 1918px;
+  height: 18rem;
+  border: 1px solid red;
+}
+.profile-card {
+  height: 200px;
+  width: 200px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(50%, -50%);
+  background-image: url("https://i.imgur.com/Y2aHGkv.png");
+  background-position-y: -60px;
+  background-position-x: -20px;
+}
+.match-cards {
+  height: 180px;
+  width: 1500px;
+  margin: 20px;
+  margin-left: 350px;
+  border-radius: 16px;
+  background: rgba(202, 193, 207, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.8px);
+  -webkit-backdrop-filter: blur(12.8px);
+  border: 1px solid rgba(210, 196, 231, 0.212);
+  color: aliceblue;
 }
