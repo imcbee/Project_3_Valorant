@@ -12,6 +12,7 @@ export default function LoginPage({ login }) {
       <div class="log-card-test">
       <div className="Login">
         <div className="Login-Form">
+        <div class="glass"></div>
           <form onSubmit="">
             <label>
               <span id="sign">Sign In</span><br></br>
