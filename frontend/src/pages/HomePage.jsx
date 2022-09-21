@@ -56,11 +56,11 @@ export default function HomePage() {
                   {item.gameName} #{item.tag}
                 </h2>
                 <h3>
-                  Rank: {item.leaderboardRank}| {item.rankedRating} RR
+                  Rank #{item.leaderboardRank} | <span>{item.rankedRating} RR </span>
                 </h3>
-                <h3>
-                  Wins: {item.numberOfWins}| {item.competitiveTier} RR
-                </h3>
+                <h4>
+                  Competitive Wins {item.numberOfWins}
+                </h4>
               </div>
             );
           })}
@@ -88,6 +88,7 @@ export default function HomePage() {
           </div> */}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
