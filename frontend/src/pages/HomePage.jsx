@@ -47,45 +47,24 @@ export default function HomePage() {
         <HeroLarge />
         {/* {console.log(leaderPlayers)} */}
         <div className="leaderboard">
-          {leaderPlayers.map((item) => {
+          {leaderPlayers.map((item, idx) => {
             return (
               <div className="player-card">
                 {console.log(item)}
-                <div className="pfp"><img src={item.card.small} alt="pfp" /></div>
+                <div className="pfp">
+                  <img src={item.card.small} alt="pfp" />
+                </div>
                 <h2>
                   {item.gameName} #{item.tag}
                 </h2>
                 <h3>
-                  Rank #{item.leaderboardRank} | <span>{item.rankedRating} RR </span>
+                  Rank #{item.leaderboardRank} |{" "}
+                  <span>{item.rankedRating} RR </span>
                 </h3>
-                <h4>
-                  Competitive Wins {item.numberOfWins}
-                </h4>
+                <h4>Competitive Wins {item.numberOfWins}</h4>
               </div>
             );
           })}
-          {/* <div className="leader">
-            <div className="player-card">
-              <div className="pfp"></div>
-              <h2>Player #ttv</h2>
-              <h3>Rank 1 | 1000 RR</h3>
-            </div>
-            <div className="player-card2">
-              <div className="pfp"></div>
-              <h2>Player #ttv</h2>
-              <h3>Rank 1 | 1000 RR</h3>
-            </div>
-            <div className="player-card3">
-              <div className="pfp"></div>
-              <h2>Player #ttv</h2>
-              <h3>Rank 1 | 1000 RR</h3>
-            </div>
-            <div className="player-card4">
-              <div className="pfp"></div>
-              <h2>Player #ttv</h2>
-              <h3>Rank 1 | 1000 RR</h3>
-            </div>
-          </div> */}
         </div>
       </div>
       <Footer />
