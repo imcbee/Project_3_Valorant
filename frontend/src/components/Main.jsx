@@ -2,6 +2,7 @@ import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import EditComment from "../pages/EditComment";
+import PlayerPage from "../pages/PlayerPage";
 import { Routes, Route, Outlet } from "react-router-dom";
 
 export default function Main({ signup, isLoggedIn, login, user }) {
@@ -14,6 +15,7 @@ export default function Main({ signup, isLoggedIn, login, user }) {
         <Route path="/login" element={<LoginPage login={login} />} />
         <Route path="/register" element={<RegisterPage signUp={signup} />} />
         <Route path="/comment/:id" element={<EditComment />} />
+        <Route path="/player" element={<PlayerPage />} />
       </Routes>
     </div>
   );
