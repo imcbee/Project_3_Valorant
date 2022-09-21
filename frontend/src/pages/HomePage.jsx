@@ -49,9 +49,9 @@ export default function HomePage() {
         <div className="leaderboard">
           {leaderPlayers.map((item) => {
             return (
-              <div class="player-card">
+              <div className="player-card">
                 {console.log(item)}
-                <div class="pfp"></div>
+                <div className="pfp"><img src={item.card.small} alt="pfp" /></div>
                 <h2>
                   {item.gameName} #{item.tag}
                 </h2>
