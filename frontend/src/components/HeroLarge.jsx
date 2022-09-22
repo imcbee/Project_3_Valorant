@@ -8,11 +8,15 @@ export default function HeroLarge() {
                 <img src="/images/Neon_Hero.webp"></img>
             </div> */}
       <div class="Hero">
-        <button class="v7_38"><a href="/login">Sign In</a></button>
+        {/* <button class="v7_38"><a href="/login">Sign In</a></button> */}
         <div class="v3_7"></div>
         <div class="v3_8"></div>
         <div class="v3_9"></div>
-        <input class="v3_15" placeholder="Player#NA1" />
+        <form onSubmit="">
+          <label>gameName</label>
+          <input class="v3_15" placeholder="gameName" onChange="" name="gameName" value=""/>
+          {/* <input class="v3_15" placeholder="tag" /> */}
+        </form>
         </div>
 
       <div class="v7_36"></div>

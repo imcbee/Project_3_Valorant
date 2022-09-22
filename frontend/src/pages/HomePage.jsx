@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import LeaderBoard from "../components/LeaderBoard";
 import React, { useEffect, useState } from "react";
 import "../styles/HomePage.css";
+import { json } from "react-router";
 
 const URL = "https://val-halla.herokuapp.com/test";
 
@@ -12,7 +13,24 @@ export default function HomePage() {
   // Leader player state
 
   const [leaderPlayers, setLeaderPlayers] = useState([]);
+  const [searchForm, setSearchForm] = useState(null);
 
+  const searchPlayer = async () => {
+    try {
+      const options = {
+        method: "GET",
+        body: json.stringify(editForm),
+        headers: {
+          "Content-Type" : "application/json"
+        }
+      }
+      
+      const response = await fetch()
+    } catch (err) {
+      console.log(err)
+    }
+
+  }
   // fetch from backend
   const getPlayers = async () => {
     try {

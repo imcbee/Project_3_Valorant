@@ -4,6 +4,7 @@ import HeroSmall from "../components/HeroLarge";
 import Comments from "../components/Comments";
 import OptionsNav from "../components/OptionsNav";
 import { useState, useEffect } from "react";
+import { userParams } from "react-router-dom"; 
 
 const URL = "https://val-halla.herokuapp.com/test/profile/V1 Zander";
 
