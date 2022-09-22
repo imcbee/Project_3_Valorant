@@ -360,6 +360,9 @@ a:hover {
   font-family: "Work Sans", sans-serif;
   margin: 40px;
   margin-left: -230px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;*/
 }
 #git {
   width: 60px;
@@ -370,18 +373,24 @@ a:hover {
 .profile-banner {
   width: 1918px;
   height: 18rem;
-  border: 1px solid red;
+}
+.profile-banner > img {
+  width: 1918px;
+  height: 18rem;
 }
 .profile-card {
   height: 200px;
   width: 200px;
-  background-color: grey;
+  /* background-color: grey; */
   border-radius: 50%;
   position: absolute;
   transform: translate(50%, -50%);
-  background-image: url("https://i.imgur.com/Y2aHGkv.png");
+  /* background-image: url("https://i.imgur.com/Y2aHGkv.png"); */
   background-position-y: -60px;
   background-position-x: -20px;
+}
+.info-text {
+  font-size: 35px;
 }
 .match-cards {
   height: 180px;
