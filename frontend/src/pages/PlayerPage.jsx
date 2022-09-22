@@ -5,7 +5,8 @@ import Comments from "../components/Comments";
 import OptionsNav from "../components/OptionsNav";
 import { useState, useEffect } from "react";
 
-const URL = "https://val-halla.herokuapp.com/test/profile/V1 Zander";
+const URL = "https://api.henrikdev.xyz/valorant/v1/account/";
+const { REACT_APP_API_KEY } = process.env;
 
 export default function PlayerPage() {
   // fetch API data
@@ -32,6 +33,14 @@ export default function PlayerPage() {
 
   const getPlayer = async () => {
     try {
+      const options = {
+        method: "GET",
+        headers: {
+          Authorization: REACT_APP_API_KEY,
+        },
+      };
+      const id = "";
+      const tag = "";
       const response = await fetch(URL);
       //console.log(response);
       const data = await response.json();
