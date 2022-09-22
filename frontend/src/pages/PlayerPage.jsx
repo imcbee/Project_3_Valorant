@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const URL = "https://api.henrikdev.xyz/valorant/v1/account/";
 const { REACT_APP_API_KEY } = process.env;
-
+console.log(URL);
 export default function PlayerPage() {
   // fetch API data
   // do we need to have props sent from Main?
@@ -30,7 +30,7 @@ export default function PlayerPage() {
     linkedAccount: "",
   };
   const [playerInfo, setPlayerInfo] = useState(initialState);
-
+  console.log(playerInfo);
   const getPlayer = async () => {
     try {
       const options = {
@@ -39,9 +39,9 @@ export default function PlayerPage() {
           Authorization: REACT_APP_API_KEY,
         },
       };
-      const id = "";
-      const tag = "";
-      const response = await fetch(URL);
+      const id = playerInfo.gameName;
+      const tag = playerInfo.tag;
+      const response = await fetch(`${URL}${id}/${tag}`, options);
       //console.log(response);
       const data = await response.json();
       setPlayerInfo(data);
@@ -50,20 +50,18 @@ export default function PlayerPage() {
     }
   };
 
-  useEffect(() => {
-    getPlayer();
-  }, []);
+  useEffect(() => {}, []);
 
-  console.log(playerInfo);
+  //console.log(playerInfo);
 
   return (
     <>
       <Header />
       <div className="profile-banner">
-        <img src={playerInfo.card.wide} />
+        <img />
       </div>
       <div className="profile-card">
-        <img src={playerInfo.card.small} />
+        <img />
       </div>
       <div className="match-cards"></div>
       <div className="other-info"></div>

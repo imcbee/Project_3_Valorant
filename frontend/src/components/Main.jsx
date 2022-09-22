@@ -15,7 +15,7 @@ export default function Main({ signup, isLoggedIn, login, user }) {
         <Route path="/login" element={<LoginPage login={login} />} />
         <Route path="/register" element={<RegisterPage signUp={signup} />} />
         <Route path="/comment/:id" element={<EditComment />} />
-        <Route path="/player" element={<PlayerPage />} />
+        <Route path="/test/profile/:id" element={<PlayerPage />} />
       </Routes>
     </div>
   );

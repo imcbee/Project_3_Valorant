@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useHistory, redirect } from "react-router-dom";
 
-// const URL = `https://val-halla.herokuapp.com/test/profile/`;
+const database = `https://val-halla.herokuapp.com/test/profile/`;
+//console.log(REACT_APP_API_KEY);
 const URL = `https://api.henrikdev.xyz/valorant/v1/account/`;
 const { REACT_APP_API_KEY } = process.env;
-console.log(REACT_APP_API_KEY);
+
 export default function HeroLarge() {
   const initialState = {
     gameName: "",
@@ -12,6 +13,7 @@ export default function HeroLarge() {
   };
   const [submitForm, setSubmitForm] = useState(initialState);
   const navigate = useNavigate();
+
   const getPlayer = async () => {
     try {
       const options = {
@@ -22,10 +24,13 @@ export default function HeroLarge() {
       };
       let id = submitForm.gameName;
       let tag = submitForm.tag;
+      console.log(tag);
+      console.log(id);
       const response = await fetch(`${URL}${id}/${tag}`, options);
       const data = await response.json();
+      console.log(tag);
+      console.log(id);
       return redirect(`/test/profile/${id}`);
-      console.log(data);
     } catch (err) {
       console.log(err);
     }
@@ -37,6 +42,7 @@ export default function HeroLarge() {
     //console.log(data);
     setSubmitForm(data);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     getPlayer();
@@ -44,12 +50,6 @@ export default function HeroLarge() {
 
   return (
     <>
-      {/* <h1>HeroLarge</h1>
-            <div className="Main-Hero">
-                <h2>Valorant Tracker</h2>
-                <p>Check Detailed Valorant Stats and Leaderboards</p>
-                <img src="/images/Neon_Hero.webp"></img>
-            </div> */}
       <div className="Hero">
         <button className="v7_38">
           <a href="/login">Sign In</a>
