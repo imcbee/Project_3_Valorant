@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
 
 /* NavBar Styles */
 body {
@@ -70,7 +69,7 @@ body {
   margin-left: 30px;
 }
 .nav span {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
 }
 /* main page */
 .v3_4 {
@@ -159,6 +158,44 @@ body {
   overflow: hidden;
   text-indent: 40px;
 }
+.v3_16 {
+  width: 465px;
+  height: 62px;
+  background: rgb(250, 250, 250);
+  font-size: 24px;
+  opacity: 1;
+  position: absolute;
+  top: 559px;
+  left: 562px;
+  border-color: transparent;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  text-indent: 40px;
+}
+.v3_17 {
+  color: black;
+  width: 465px;
+  height: 62px;
+  background: rgb(250, 250, 250);
+  font-size: 24px;
+  opacity: 1;
+  position: absolute;
+  top: 359px;
+  left: 562px;
+  border-color: transparent;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  text-indent: 40px;
+}
+.form-container {
+  border: 1px solid red;
+}
 .v3_15:hover {
   background: white;
 }
@@ -192,7 +229,7 @@ input:focus {
   border-color: transparent;
   overflow: hidden;
   z-index: 99;
-  color:rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
   font-weight: bold;
   font-size: 15.7px;
 }
@@ -237,7 +274,7 @@ input:focus {
   position: absolute;
   top: 347px;
   left: 170px;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   font-size: 45px;
   opacity: 1;
   text-align: left;
@@ -271,7 +308,6 @@ input:focus {
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
-  position: absolute;
 }
 .player-card {
   height: 325px;
@@ -279,12 +315,12 @@ input:focus {
   transform: translate(0%, 193%);
   /* From https://css.glass */
   background: rgba(202, 193, 207, 0.2);
- border-radius: 16px;
- box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
- backdrop-filter: blur(12.8px);
- -webkit-backdrop-filter: blur(12.8px);
- border: 1px solid rgba(210, 196, 231, 0.212);
- color: aliceblue;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.8px);
+  -webkit-backdrop-filter: blur(12.8px);
+  border: 1px solid rgba(210, 196, 231, 0.212);
+  color: aliceblue;
 }
 h4 {
   color: rgba(168, 168, 168, 0.932);
@@ -321,7 +357,7 @@ a:hover {
 }
 .footer {
   color: #edededbb;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin: 40px;
   margin-left: -230px;
 }

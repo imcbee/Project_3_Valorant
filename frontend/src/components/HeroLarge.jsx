@@ -1,24 +1,97 @@
+import { useState, useEffect } from "react";
+import { useNavigate, useHistory, redirect } from "react-router-dom";
+
+// const URL = `https://val-halla.herokuapp.com/test/profile/`;
+const URL = `https://api.henrikdev.xyz/valorant/v1/account/`;
+const { REACT_APP_API_KEY } = process.env;
+console.log(REACT_APP_API_KEY);
 export default function HeroLarge() {
+  const initialState = {
+    gameName: "",
+    tag: "",
+  };
+  const [submitForm, setSubmitForm] = useState(initialState);
+  const navigate = useNavigate();
+  const getPlayer = async () => {
+    try {
+      const options = {
+        method: "GET",
+        headers: {
+          Authorization: REACT_APP_API_KEY,
+        },
+      };
+      let id = submitForm.gameName;
+      let tag = submitForm.tag;
+      const response = await fetch(`${URL}${id}/${tag}`, options);
+      const data = await response.json();
+      return redirect(`/test/profile/${id}`);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleChange = (e) => {
+    //console.log(e);
+    const data = { ...submitForm, [e.target.name]: e.target.value };
+    //console.log(data);
+    setSubmitForm(data);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getPlayer();
+  };
+
   return (
     <>
       {/* <h1>HeroLarge</h1>
-            <div class="Main-Hero">
+            <div className="Main-Hero">
                 <h2>Valorant Tracker</h2>
                 <p>Check Detailed Valorant Stats and Leaderboards</p>
                 <img src="/images/Neon_Hero.webp"></img>
             </div> */}
-      <div class="Hero">
-        <button class="v7_38"><a href="/login">Sign In</a></button>
-        <div class="v3_7"></div>
-        <div class="v3_8"></div>
-        <div class="v3_9"></div>
-        <input class="v3_15" placeholder="Player#NA1" />
-        </div>
+      <div className="Hero">
+        <button className="v7_38">
+          <a href="/login">Sign In</a>
+        </button>
+        <div className="v3_7"></div>
+        <div className="v3_8"></div>
+        <div className="v3_9"></div>
 
-      <div class="v7_36"></div>
-      <div class="v7_43"><span>Leaderboards</span></div>
-      <span class="v7_46">VALORANT TRACKER</span>
-      <span class="v7_48">Check Detailed Valorant Stats and Leaderboards</span>
+        {/* form to get player */}
+        <div className="form-container">
+          <form onSubmit={handleSubmit} id="">
+            <input
+              className="v3_15" //change flex
+              name="gameName"
+              type="text"
+              placeholder="Game Name"
+              onChange={handleChange}
+              value={submitForm.gameName}
+            />
+            <input
+              className="v3_16"
+              type="text"
+              name="tag"
+              placeholder="Tag"
+              onChange={handleChange}
+              value={submitForm.tag}
+            />
+            <button className="v3_17" input="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div className="v7_36"></div>
+      <div className="v7_43">
+        <span>Leaderboards</span>
+      </div>
+      <span className="v7_46">VALORANT TRACKER</span>
+      <span className="v7_48">
+        Check Detailed Valorant Stats and Leaderboards
+      </span>
     </>
   );
 }
