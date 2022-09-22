@@ -8,29 +8,29 @@ import { json } from "react-router";
 
 const URL = "https://val-halla.herokuapp.com/test";
 
-export default function HomePage() {
+export default function HomePage({handleChange, handleSubmit, submitForm}) {
   //pass User Auth useState into components to render data
   // Leader player state
 
   const [leaderPlayers, setLeaderPlayers] = useState([]);
-  const [searchForm, setSearchForm] = useState(null);
+  // const [searchForm, setSearchForm] = useState(null);
 
-  const searchPlayer = async () => {
-    try {
-      const options = {
-        method: "GET",
-        body: json.stringify(editForm),
-        headers: {
-          "Content-Type" : "application/json"
-        }
-      }
+  // const searchPlayer = async () => {
+  //   try {
+  //     const options = {
+  //       method: "GET",
+  //       //body: json.stringify(editForm),
+  //       headers: {
+  //         "Content-Type" : "application/json"
+  //       }
+  //     }
       
-      const response = await fetch()
-    } catch (err) {
-      console.log(err)
-    }
+  //     const response = await fetch()
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
 
-  }
+  // }
   // fetch from backend
   const getPlayers = async () => {
     try {
@@ -57,11 +57,13 @@ export default function HomePage() {
     getPlayers();
   }, []);
 
+  console.log("Testing Home: ", handleChange, handleSubmit, submitForm)
   return (
+    
     <>
       <div className="v3_4">
         <Header />
-        <HeroLarge />
+        <HeroLarge handleChange={handleChange} handleSubmit={handleSubmit} submitForm={submitForm}/>
         {/* {console.log(leaderPlayers)} */}
         <div className="leaderboard">
           {leaderPlayers.map((item, idx) => {

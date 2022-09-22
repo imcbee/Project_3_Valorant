@@ -1,74 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useHistory, redirect } from "react-router-dom";
 
-const database = `https://val-halla.herokuapp.com/test/profile/`;
-//console.log(REACT_APP_API_KEY);
-const URL = `https://api.henrikdev.xyz/valorant/v1/account/`;
-const { REACT_APP_API_KEY } = process.env;
-
-export default function HeroLarge() {
-  const initialState = {
-    gameName: "",
-    tag: "",
-  };
-  const [submitForm, setSubmitForm] = useState(initialState);
-  const navigate = useNavigate();
-
-  const getPlayer = async () => {
-    try {
-      const options = {
-        method: "GET",
-        headers: {
-          Authorization: REACT_APP_API_KEY,
-        },
-      };
-      let id = submitForm.gameName;
-      let tag = submitForm.tag;
-      console.log(tag);
-      console.log(id);
-      const response = await fetch(`${URL}${id}/${tag}`, options);
-      const data = await response.json();
-      console.log(tag);
-      console.log(id);
-      return redirect(`/test/profile/${id}`);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const handleChange = (e) => {
-    //console.log(e);
-    const data = { ...submitForm, [e.target.name]: e.target.value };
-    //console.log(data);
-    setSubmitForm(data);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    getPlayer();
-  };
-
+export default function HeroLarge({handleChange, handleSubmit, submitForm}) {
+  console.log("Testing HeroLarge: ", handleChange, handleSubmit, submitForm)
   return (
     <>
-<<<<<<< HEAD
-      {/* <h1>HeroLarge</h1>
-            <div class="Main-Hero">
-                <h2>Valorant Tracker</h2>
-                <p>Check Detailed Valorant Stats and Leaderboards</p>
-                <img src="/images/Neon_Hero.webp"></img>
-            </div> */}
-      <div class="Hero">
-        {/* <button class="v7_38"><a href="/login">Sign In</a></button> */}
-        <div class="v3_7"></div>
-        <div class="v3_8"></div>
-        <div class="v3_9"></div>
-        <form onSubmit="">
-          <label>gameName</label>
-          <input class="v3_15" placeholder="gameName" onChange="" name="gameName" value=""/>
-          {/* <input class="v3_15" placeholder="tag" /> */}
-        </form>
-        </div>
-=======
       <div className="Hero">
         <button className="v7_38">
           <a href="/login">Sign In</a>
@@ -76,8 +12,6 @@ export default function HeroLarge() {
         <div className="v3_7"></div>
         <div className="v3_8"></div>
         <div className="v3_9"></div>
->>>>>>> 5d8513b491c8508bfabebffc5461c223ee2a4a5c
-
         {/* form to get player */}
         <div className="form-container">
           <form onSubmit={handleSubmit} id="">
