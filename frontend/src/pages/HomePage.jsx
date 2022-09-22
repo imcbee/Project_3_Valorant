@@ -56,19 +56,17 @@ export default function HomePage() {
   useEffect(() => {
     getPlayers();
   }, []);
-  console.log(leaderPlayers);
 
   return (
     <>
-      <div class="v3_4">
+      <div className="v3_4">
         <Header />
         <HeroLarge />
         {/* {console.log(leaderPlayers)} */}
         <div className="leaderboard">
           {leaderPlayers.map((item, idx) => {
             return (
-              <div className="player-card">
-                {console.log(item)}
+              <div className="player-card" key={item._id}>
                 <div className="pfp">
                   <img src={item.card.small} alt="pfp" />
                 </div>
