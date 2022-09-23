@@ -54,13 +54,13 @@ Implement User Authentication.
 Display common player patterns, such as, favorite guns, damage points and agents. 
 
 ## Wireframes:<a name="wireframe"></a>
-### Back-end Wireframe
+### Back-end Wireframe:
 ![Screen Shot 2022-09-22 at 8 40 18 PM](https://user-images.githubusercontent.com/107007458/191874295-a591fc79-0fc4-492e-8352-f7c4d0b1b55d.png)
 
-### Front-end Wireframe
+### Front-end Wireframe:
 ![Screen Shot 2022-09-22 at 8 40 50 PM](https://user-images.githubusercontent.com/107007458/191874300-fc4e6926-5504-4862-b684-ded47919e394.png)
 
-### Figma Webpage Designs
+### Figma Webpage Designs:
 ![Screen Shot 2022-09-22 at 8 51 29 PM](https://user-images.githubusercontent.com/107007458/191874773-22b892c4-5e96-46c0-a06d-e05169d11e86.png)
 
 
@@ -70,16 +70,16 @@ Display common player patterns, such as, favorite guns, damage points and agents
 
 
 ## Tech Stack:<a name="techstack"></a>
-### Node.js and Express
+### Node.js and Express:
 Our Back-end was built using Node.js with Express being the framework.
 
-### React (JSX)
+### React (JSX):
 React was used to create our Front-end pages and components. 
 
-### Mongoose and MongoDB
+### Mongoose and MongoDB:
 MongoDB was used as our Back-end database to hold information such as users, comments, usergroups, and player info. We were able to navigate this using the Mongoose interface.
 
-### Postman
+### Postman:
 Postman was used to test our controllers, routes and ensure that they were properly functioning. 
 
 ## Coding Challenges:<a name="codingchallenges"></a>
@@ -129,6 +129,7 @@ export default function Main({ signup, isLoggedIn, login, user }) {
   };
 ...
 ```
+
 Kingley's
 ```jsx
 router.get("/", async (req, res) => {
