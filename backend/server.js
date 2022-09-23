@@ -13,7 +13,8 @@ const cors = require("cors");
 const morgan = require("morgan");
 
 //Database Connection
-mongoose.connect(MONGODB_URI);
+//mongoose.connect(MONGODB_URI);
+require('./config/db.connection')
 
 // Middleware
 app.use(express.json());
@@ -30,6 +31,9 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-app.listen(PORT, () => {
+app.listen( PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
+
+
+//testing heroku stuff
