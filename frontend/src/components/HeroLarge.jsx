@@ -19,7 +19,7 @@ export default function HeroLarge({handleChange, handleSubmit, submitForm}) {
               className="v3_15" //change flex
               name="gameName"
               type="text"
-              placeholder="Game Name"
+              placeholder="Player"
               onChange={handleChange}
               value={submitForm.gameName}
             />
@@ -27,12 +27,12 @@ export default function HeroLarge({handleChange, handleSubmit, submitForm}) {
               className="v3_16"
               type="text"
               name="tag"
-              placeholder="Tag"
+              placeholder="#NA1"
               onChange={handleChange}
               value={submitForm.tag}
             />
             <button className="v3_17" input="submit">
-              Submit
+              GO
             </button>
           </form>
         </div>
