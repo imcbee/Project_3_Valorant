@@ -6,10 +6,10 @@ const Schema = mongoose.Schema;
 //---User
 
 const userSchema = new Schema ({
-    username: {String, required: true, unique: true },
-    password: {String, required: true}, 
-    email: {String, required: true},
-    media: {String}, 
+    username: {type: String, required: true, unique: true },
+    password: {type: String, required: true}, 
+    email: {type: String, required: true, unique: true},
+    avatar: {type: String}, 
     groups: [{type: mongoose.Types.ObjectId, ref: 'Group', default: null},], 
     comments: [{type: mongoose.Types.ObjectId, ref: 'Comment', default: null},],
     //
@@ -26,7 +26,7 @@ const userSchema = new Schema ({
 
 //---Groups
 const groupSchema = new Schema ({
-    name: {String, required: true, default: 'Name ur grp'},
+    name: {type: String, required: true, default: 'Name ur grp'},
     profilepic: {type: String}, //URL or upload
     owner : {type: mongoose.Types.ObjectId, required: true, ref: 'User'},
     players : [{type: mongoose.Types.ObjectId, required: true, ref: 'User'},],
@@ -34,8 +34,8 @@ const groupSchema = new Schema ({
 //---Comments
 
 const commentSchema = new Schema ({
-    title: {String},
-    commentBody: {String},
+    title: {type: String},
+    commentBody: {type: String},
     userRef: {type: mongoose.Types.ObjectId, required: true, ref: 'User'},
 })
 

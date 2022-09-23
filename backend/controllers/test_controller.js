@@ -1,46 +1,67 @@
 const express = require('express');
 const router = express.Router();
-//const methodOverride = require('method-override')
+const bcrypt = require ('bcrypt');
+const methodOverride = require('method-override')
 
 //middleware
 
 // Model Import
 const Models = require('../models/models.js');
+const {createUserToken} = require('../middleware/auth')
+
 
 // Routes ('/test/:ext')
 
 // Users Index
-router.get("/", async (req,res)=>{
+router.get("/users", async (req,res)=>{
     try{
-        
+        userIndex = await Models.User.find();
+        res.send(userIndex)
     } catch(err){
         console.log(err)
     }
 })
 
-// User Create
-
-router.post('/', async (req, res) => {
+//User Show 
+router.get("/profile/:ext", async (req, res) => {
     try {
-        const salt = await bcrypt.genSalt(10)
-        const passwordHash = await bcrypt.hash(req.body.password, salt)
-        req.body.password = passwordHash;
-        //console.log(req.body)
-        const newUser = await Models.User.create(req.body);
-
-        res.status(200).json({message: "hitting auth register"})
+        user = await Models.User.findById(req.params.ext)
+        res.send("this works")
     } catch(err) {
-        res.status(400).json({error: err.message})
+        console.log(err)
     }
 })
 
-// User Show
+//User update page
+router.get("/profile/:ext/update", async (req,res) => {
+    try {
+        user = await Models.User.findById(req.params.ext)
+        res.send("this works 2")
+    } catch(err) {
+        console.log(err)
+    }
+})
 
+//User Update put
+router.put('/update', async (req, res) => {
+    try {
+        res.json(
+        await Models.User.findByIdAndUpdate(req.body._id, {avatar: req.body.avatar})
+        )
+    } catch(err) {
+        console.log(err)
+    }
+})
 
-// User Update
-
-
-// User Delete
-
+//User Delete req
+router.delete('/delete', async (req, res) => {
+    try {
+        res.json(
+        await Models.User.findByIdAndDelete(req.body._id)
+        )
+    } catch(err) {
+        console.log(err)
+    }
+})
 
 module.exports = router;
