@@ -85,10 +85,12 @@ MongoDB was used as our Back-end database to hold information such as users, com
 Postman was used to test our controllers, routes and ensure that they were properly functioning. 
 
 ## Coding Challenges:<a name="codingchallenges"></a>
-- Utilizing the API package to make calls within the Front-end.
-- Taking information given from one API call and incorporating it into different api calls.
-- Correcting preformatted CSS from figma. 
-- Efficiently incorporating the API within the Back-end. 
+- Utilizing the API package(s) to make calls within the Front-end.
+- Taking information given from one API call and incorporating it into different API calls.
+- Correcting pre-formatted HTML & CSS from figma. 
+- Efficiently incorporating the API within the Back-end.
+- Implementing User Auth as a first database.
+- Effectively planning and strategizing build Back-end routes and Front-end routes with API and data-flow.
 
 Being able to fetch the API and define a new state taught me a lot to understand how a new state can be defined and passed as a prop through multiple components. - Ian McBee
 ```jsx
