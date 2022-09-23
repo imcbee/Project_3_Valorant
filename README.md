@@ -25,6 +25,8 @@
 5. [Example Pictures](#examplepictures)     
 6. [Tech Stack](#techstack) 
 7. [Coding Challenges](#codingchallenges)
+8. [Future Goals](#futuregoals)
+9. [Summary](#summary)
 
 ---  
 ### [Website Link] <a name="websitelink"></a>
@@ -152,16 +154,19 @@ router.get("/", async (req, res) => {
 });
 ```
 
-## Future Goals
+## Future Goals<a name="futuregoals"></a>
+- Develop uncompleted routes.
 - Fully incorporate user authentication.
-- Incorporate more user data (User ranking, win/loss ratio, kill/death ratio)
-- Larger leaderboard 
-- Group creation 
-- Mobile adaptation
+- Incorporate more user data (User ranking, win/loss ratio, kill/death ratio).
+- Larger leaderboard.
+- Group creation through user authentication.
+
+## Summary<a name="summary"></a>
+Overall, this porject was a challenging MERN project and our team were only to succeed 
 
 ---
 ## Contributors
 [Ian McBee](https://github.com/imcbee) | Front-end Lead, Back-end |   
-[Corey Neal](https://github.com/BadMeme) | Back-end Lead |\
-[Estrella Alvarez](https://github.com/estrellalvarez) | Design Lead, Front-end |\
+[Corey Neal](https://github.com/BadMeme) | Back-end Lead, Front-end |\
+[Estrella Alvarez](https://github.com/estrellalvarez) | Design Lead, Front-end, API Support |\
 [Kingsley Le](https://github.com/Codesley) | API Lead, Back-end |
