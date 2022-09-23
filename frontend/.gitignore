@@ -24,3 +24,5 @@ yarn-error.log*
 
 #corey 
 scratchpad.js
+src/pages/HomePage.jsx
+src/pages/PlayerPage.jsx

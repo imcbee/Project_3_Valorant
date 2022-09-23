@@ -1,17 +1,17 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HeroSmall from "../components/HeroLarge";
-import Comments from "../components/Comments";
-import OptionsNav from "../components/OptionsNav";
+// import HeroSmall from "../components/HeroLarge";
+// import Comments from "../components/Comments";
+// import OptionsNav from "../components/OptionsNav";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; 
+// import { useParams } from "react-router-dom"; 
 
 ///
 
 //const URL = "https://api.henrikdev.xyz/valorant/v1/account/";
-const database= "https://valorant-testing.herokuapp.com/test/profile/"
+// const database= "https://valorant-testing.herokuapp.com/test/profile/"
 
-const { REACT_APP_API_KEY } = process.env;
+// const { REACT_APP_API_KEY } = process.env;
 
 export default function PlayerPage({submitForm}) {
 
