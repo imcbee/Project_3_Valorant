@@ -205,6 +205,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
 .form-container {
   border: 1px solid red;
@@ -321,6 +322,7 @@ input:focus {
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
+  position: absolute;
 }
 .player-card {
   height: 325px;

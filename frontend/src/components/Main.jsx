@@ -13,7 +13,7 @@ const { REACT_APP_API_KEY } = process.env;
 //console.log(REACT_APP_API_KEY);
 
 export default function Main({ signup, isLoggedIn, login, user }) {
-  //console.log(signup);
+  // console.log(handleSubmit, handleChange);
 
   const initialState = {
     gameName: "",
