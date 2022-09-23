@@ -5,7 +5,7 @@ import "../styles/HomePage.css";
 export default function Header() {
   return (
     <div className="header">
-      <div class="navi">
+      <div className="navi">
         <nav className="navbar">
           <Link to="/" className="nav">
             <span id="val">VAL.HALLA</span>
@@ -24,7 +24,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        <div class="val-icon"></div>
+        <div className="val-icon"></div>
       </div>
     </div>
   );

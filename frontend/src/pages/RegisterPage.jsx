@@ -28,59 +28,64 @@ export default function RegisterPage({ signUp }) {
     <>
       <Header />
       <div className="Register">
-      <div class="reg-card-test">
-      <span id="reg">Register</span><br></br>
-        <div className="Register-Form">
-          <form onSubmit={handleSubmit}>
-            <label>
-              <span>Username</span>
-              <input id="rg"
-                type="text"
-                required
-                name="username"
-                placeholder="Enter username"
-                onChange={handleChange}
-                value={input.username}
-              />
-            </label>
-            <label>
-              <span>Email</span>
-              <input id="rg"
-                type="text"
-                required
-                name="email"
-                placeholder="Enter email"
-                onChange={handleChange}
-                value={input.email}
-              />
-            </label>
-            <label>
-              <span>Password</span>
-              <input id="rg"
-                type="text"
-                required
-                name="password"
-                placeholder="Enter password"
-                onChange={handleChange}
-                value={input.password}
-              />
-            </label>
-            <label>
-              <span>Avatar</span>
-              <input id="rg"
-                type="text"
-                required
-                name="avatar"
-                placeholder="Enter avatar"
-                onChange={handleChange}
-                value={input.avatar}
-              />
-            </label>
-            <button type="submit" value="">
-              Register
-            </button>
-          </form>
-        </div>
+        <div className="reg-card-test">
+          <span id="reg">Register</span>
+          <br></br>
+          <div className="Register-Form">
+            <form onSubmit={handleSubmit}>
+              <label>
+                <span>Username</span>
+                <input
+                  id="rg"
+                  type="text"
+                  required
+                  name="username"
+                  placeholder="Enter username"
+                  onChange={handleChange}
+                  value={input.username}
+                />
+              </label>
+              <label>
+                <span>Email</span>
+                <input
+                  id="rg"
+                  type="text"
+                  required
+                  name="email"
+                  placeholder="Enter email"
+                  onChange={handleChange}
+                  value={input.email}
+                />
+              </label>
+              <label>
+                <span>Password</span>
+                <input
+                  id="rg"
+                  type="text"
+                  required
+                  name="password"
+                  placeholder="Enter password"
+                  onChange={handleChange}
+                  value={input.password}
+                />
+              </label>
+              <label>
+                <span>Avatar</span>
+                <input
+                  id="rg"
+                  type="text"
+                  required
+                  name="avatar"
+                  placeholder="Enter avatar"
+                  onChange={handleChange}
+                  value={input.avatar}
+                />
+              </label>
+              <button type="submit" value="">
+                Register
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       <Footer />

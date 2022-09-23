@@ -1,24 +1,51 @@
-export default function HeroLarge() {
+import { useState, useEffect } from "react";
+import { useNavigate, useHistory, redirect } from "react-router-dom";
+
+export default function HeroLarge({handleChange, handleSubmit, submitForm}) {
+  console.log("Testing HeroLarge: ", handleChange, handleSubmit, submitForm)
   return (
     <>
-      {/* <h1>HeroLarge</h1>
-            <div class="Main-Hero">
-                <h2>Valorant Tracker</h2>
-                <p>Check Detailed Valorant Stats and Leaderboards</p>
-                <img src="/images/Neon_Hero.webp"></img>
-            </div> */}
-      <div class="Hero">
-        <button class="v7_38"><a href="/login">Sign In</a></button>
-        <div class="v3_7"></div>
-        <div class="v3_8"></div>
-        <div class="v3_9"></div>
-        <input class="v3_15" placeholder="Player#NA1" />
+      <div className="Hero">
+        <button className="v7_38">
+          <a href="/login">Sign In</a>
+        </button>
+        <div className="v3_7"></div>
+        <div className="v3_8"></div>
+        <div className="v3_9"></div>
+        {/* form to get player */}
+        <div className="form-container">
+          <form onSubmit={handleSubmit} id="">
+            <input
+              className="v3_15" //change flex
+              name="gameName"
+              type="text"
+              placeholder="Player"
+              onChange={handleChange}
+              value={submitForm.gameName}
+            />
+            <input
+              className="v3_16"
+              type="text"
+              name="tag"
+              placeholder="#NA1"
+              onChange={handleChange}
+              value={submitForm.tag}
+            />
+            <button className="v3_17" input="submit">
+              GO
+            </button>
+          </form>
         </div>
+      </div>
 
-      <div class="v7_36"></div>
-      <div class="v7_43"><span>Leaderboards</span></div>
-      <span class="v7_46">VALORANT TRACKER</span>
-      <span class="v7_48">Check Detailed Valorant Stats and Leaderboards</span>
+      <div className="v7_36"></div>
+      <div className="v7_43">
+        <span>Leaderboards</span>
+      </div>
+      <span className="v7_46">VALORANT TRACKER</span>
+      <span className="v7_48">
+        Check Detailed Valorant Stats and Leaderboards
+      </span>
     </>
   );
 }
