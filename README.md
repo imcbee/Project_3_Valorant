@@ -59,7 +59,7 @@ Our back-end repo link is below.  It is hosted on Heroku and the Front-end is ho
 - Display common player patterns, such as, favorite guns, damage points and agents. 
 
 ## Wireframes:<a name="wireframe"></a>
-### Back-end and Front-end Flow-chart:
+### Back-end and Front-end Flow-Chart:
 ![Screen Shot 2022-09-22 at 8 40 18 PM](https://user-images.githubusercontent.com/107007458/191874295-a591fc79-0fc4-492e-8352-f7c4d0b1b55d.png)
 
 ### Front-end Wireframe:
