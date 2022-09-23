@@ -129,6 +129,27 @@ export default function Main({ signup, isLoggedIn, login, user }) {
   };
 ...
 ```
+Kingley's
+```jsx
+router.get("/", async (req, res) => {
+  try {
+    async function getLeaderBoard() {
+      let leaderBoard = [];
+      try {
+        const response = await Models.Player.find({
+          leaderboardRank: { $gte: 1 } && { $lte: 4 },
+        });
+        res.send(response);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    getLeaderBoard();
+  } catch (err) {
+    console.log(err);
+  }
+});
+```
 
 ## Future Goals
 Fully incorporate user authentication.
