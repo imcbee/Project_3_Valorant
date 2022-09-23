@@ -53,14 +53,14 @@ Display stats dynamically (graphs and charts) with a React library.
 Implement User Authentication.  
 Display common player patterns, such as, favorite guns, damage points and agents. 
 
-## Wireframe:<a name="wireframe"></a>
-### Back-end
+## Wireframes:<a name="wireframe"></a>
+### Back-end Wireframe
 ![Screen Shot 2022-09-22 at 8 40 18 PM](https://user-images.githubusercontent.com/107007458/191874295-a591fc79-0fc4-492e-8352-f7c4d0b1b55d.png)
 
-### Front-end
+### Front-end Wireframe
 ![Screen Shot 2022-09-22 at 8 40 50 PM](https://user-images.githubusercontent.com/107007458/191874300-fc4e6926-5504-4862-b684-ded47919e394.png)
 
-### Figma Designs
+### Figma Webpage Designs
 ![Screen Shot 2022-09-22 at 8 51 29 PM](https://user-images.githubusercontent.com/107007458/191874773-22b892c4-5e96-46c0-a06d-e05169d11e86.png)
 
 
@@ -83,10 +83,10 @@ MongoDB was used as our Back-end database to hold information such as users, com
 Postman was used to test our controllers, routes and ensure that they were properly functioning. 
 
 ## Coding Challenges:<a name="codingchallenges"></a>
-Utilizing the API package to make calls within the Front-end.
-Taking information given from one API call and incorporating it into different api calls.
-Correcting preformatted CSS from figma. 
-Efficiently incorporating the API within the Back-end. 
+- Utilizing the API package to make calls within the Front-end.
+- Taking information given from one API call and incorporating it into different api calls.
+- Correcting preformatted CSS from figma. 
+- Efficiently incorporating the API within the Back-end. 
 
 Being able to fetch the API and define a new state taught me a lot to understand how a new state can be defined and passed as a prop through multiple components. - Ian McBee
 ```jsx
@@ -152,11 +152,11 @@ router.get("/", async (req, res) => {
 ```
 
 ## Future Goals
-Fully incorporate user authentication.
-Incorporate more user data (User ranking, win/loss ratio, kill/death ratio)
-Larger leaderboard 
-Group creation 
-Mobile adaptation
+- Fully incorporate user authentication.
+- Incorporate more user data (User ranking, win/loss ratio, kill/death ratio)
+- Larger leaderboard 
+- Group creation 
+- Mobile adaptation
 
 ---
 ## Contributors
