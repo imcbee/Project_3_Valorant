@@ -35,6 +35,8 @@
 ## Project Description:<a name="projectdescription"></a>
 Val.halla is a companion application that tracks current players of the popular FPS game Valorant, created by Riot Games.  We drew inspiration from other apps like **Tracker.gg** to be able to display specific online players.  As a software development team, we all shared a common interest in gaming and wanted to create an application that would allow users to be able to see interesting statistics, player profiles, and the global leaderboard. Val.halla is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc. 
 
+Our back-end repo link is below.  It is hosted on Heroku and the Front-end is hosted through Netlify (hostingpending).
+[val.halla Back-end Repo](https://github.com/BadMeme/val.halla-heroku)
 
 ## Goals and Stretch Features:<a name="goalsandstretchfeatures"></a>
 ### MVP Goals:
