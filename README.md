@@ -29,31 +29,31 @@
 9. [Summary](#summary)
 
 ---  
-### [Website Link] <a name="websitelink"></a>
+### [Website Link - TDB] <a name="websitelink"></a>
 ---
 
 ## Project Description:<a name="projectdescription"></a>
-Val.halla is a companion application that tracks current players of the popular FPS game Valorant, created by Riot Games.  We drew inspiration from other apps like Tracker.gg to be able to display specific online players.  As a software development team, we all shared a common interest in gaming and wanted to create an application that would allow users to be able to see interesting statistics, player profiles, and the global leaderboard. Val.halla is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc. 
+Val.halla is a companion application that tracks current players of the popular FPS game Valorant, created by Riot Games.  We drew inspiration from other apps like **Tracker.gg** to be able to display specific online players.  As a software development team, we all shared a common interest in gaming and wanted to create an application that would allow users to be able to see interesting statistics, player profiles, and the global leaderboard. Val.halla is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc. 
 
 
 ## Goals and Stretch Features:<a name="goalsandstretchfeatures"></a>
 ### MVP Goals:
-Utilize a Back-end and Front-end framework that work cohesively together.
-Incorporate a Mongo database.
-Include data from a third-party API.
-Style design with CSS flexbox and grid. 
-Search a player by using their game name and tag, and then display the player’s information. 
-Display the top three players in the North-America (NA) region. 
-Deploy Back-end on Heroku.
-Deploy Front-end on Netlify. 
+- Utilize a Back-end and Front-end framework that work cohesively together.
+- Incorporate a Mongo database.
+- Include data from a third-party API.
+- Style design with CSS flexbox and grid. 
+- Search a player by using their game name and tag, and then display the player’s information. 
+- Display the top three players in the North-America (NA) region. 
+- Deploy Back-end on Heroku.
+- Deploy Front-end on Netlify. 
 
 ### Stretch Goals:
-Create user profiles that link to their own player profile. 
-Create player groups that show distinct group statistics from previous games played. 
-Display current Valorant store shop. 
-Display stats dynamically (graphs and charts) with a React library.
-Implement User Authentication.  
-Display common player patterns, such as, favorite guns, damage points and agents. 
+- Create user profiles that link to their own player profile. 
+- Create player groups that show distinct group statistics from previous games played. 
+- Display current Valorant store shop. 
+- Display stats dynamically (graphs and charts) with a React library.
+- Implement User Authentication.  
+- Display common player patterns, such as, favorite guns, damage points and agents. 
 
 ## Wireframes:<a name="wireframe"></a>
 ### Back-end Wireframe:
@@ -130,9 +130,10 @@ export default function Main({ signup, isLoggedIn, login, user }) {
     getPlayer();
   };
 ...
+
 ```
 
-Kingley's
+This was my favorite cause it was the first api call that we got to work in the backend. After that we had high hopes of being able to call everything else. - Kingleys Le
 ```jsx
 router.get("/", async (req, res) => {
   try {
@@ -152,6 +153,60 @@ router.get("/", async (req, res) => {
     console.log(err);
   }
 });
+
+```
+
+This code was interest because it let us work around in calling API and render a large poriton of the data at once.  However, we were only able to implement this through the localhost. - Corey Neal
+```jsx
+router.get("/profile/:ext/:tag", async (req, res) => {
+
+    const options = {
+        method: "GET",
+        headers: {
+          Authorization: REACT_APP_API_KEY,
+          //Host: ''
+        },
+    }
+
+    try {
+        
+        const real = await fetch(`https://api.henrikdev.xyz/valorant/v1/account/${req.params.ext}/${req.params.tag}`, options)
+        const data = await real.json();
+
+        //console.log("Fest test: ", apiData.data)
+        const real2 = await fetch(`https://api.henrikdev.xyz/valorant/v1/by-puuid/mmr/na/${data.data.puuid}`, options)
+        //console.log("Resonse 2: ", response2)
+        const data2 = await real2.json();
+
+        // const real3 = await fetch(`https://api.henrikdev.xyz/valorant/v3/by-puuid/matches/na/${data.data.puuid}`)
+        // const data3 = await real3.json();
+        
+
+        const info = {
+            puuid: data.data.puuid,
+            name: data.data.name,
+            tag: data.data.tag,
+            region: data.data.region,
+            account_level: data.data.account_level,
+            card: data.data.card,
+            currenttier: data2.data.currenttier,
+            elo: data2.data.elo,
+            images: data2.data.images,// {lareg, small, triangle_down, triangle_up}, //this is rank
+            ranking_in_tier: data2.data.ranking_in_tier, 
+            matchHistory_small: "Work in progress", //data3.data,
+            //The following is derived data that i will calulate above
+            wr: "Testing",
+            favHeros: ["Testing", "OneTwo", "Three"],
+            favGun: "Gun",
+            friends: ["This will take math"]
+        }
+
+        res.json(info)
+    } catch(err) {
+        console.log(err)
+    }
+})
+
 ```
 
 ## Future Goals<a name="futuregoals"></a>
@@ -161,11 +216,11 @@ router.get("/", async (req, res) => {
 - Larger leaderboard.
 - Group creation through user authentication.
 
-## Summary<a name="summary"></a>
-Overall, this porject was a challenging MERN project and our team were only to succeed 
+## Summary:<a name="summary"></a>
+Overall, this project was a very challenging MERN project for our team and it was difficult to complete our MVP goals.  This was due to our approach in setting up our routes and the challenging API calls to the Front-end.  Our strategy was to establish user auth first when it would have been a better strategy to implement a working API calling or setting up a different controller.  The scope of our project goals was also too big to implement when making smaller achievable goals and increment towards a working application.  In our next approach in building a version 2 of this application, we want to rebuild with these learnings and improve our understandings with MERN full-stack applications.  Through the challenges, this was a very fun project we can't wait to make a version 2.
 
 ---
-## Contributors
+## Contributors:
 [Ian McBee](https://github.com/imcbee) | Front-end Lead, Back-end |   
 [Corey Neal](https://github.com/BadMeme) | Back-end Lead, Front-end |\
 [Estrella Alvarez](https://github.com/estrellalvarez) | Design Lead, Front-end, API Support |\
