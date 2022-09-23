@@ -8,7 +8,7 @@ import { json } from "react-router";
 
 const URL = "https://val-halla.herokuapp.com/test";
 
-export default function HomePage({handleChange, handleSubmit, submitForm}) {
+export default function HomePage({ handleChange, handleSubmit, submitForm }) {
   //pass User Auth useState into components to render data
   // Leader player state
 
@@ -24,7 +24,7 @@ export default function HomePage({handleChange, handleSubmit, submitForm}) {
   //         "Content-Type" : "application/json"
   //       }
   //     }
-      
+
   //     const response = await fetch()
   //   } catch (err) {
   //     console.log(err)
@@ -57,13 +57,16 @@ export default function HomePage({handleChange, handleSubmit, submitForm}) {
     getPlayers();
   }, []);
 
-  console.log("Testing Home: ", handleChange, handleSubmit, submitForm)
+  console.log("Testing Home: ", handleChange, handleSubmit, submitForm);
   return (
-    
     <>
       <div className="v3_4">
         <Header />
-        <HeroLarge handleChange={handleChange} handleSubmit={handleSubmit} submitForm={submitForm}/>
+        <HeroLarge
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          submitForm={submitForm}
+        />
         {/* {console.log(leaderPlayers)} */}
         <div className="leaderboard">
           {leaderPlayers.map((item, idx) => {
