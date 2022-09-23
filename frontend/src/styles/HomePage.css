@@ -159,39 +159,52 @@ body {
   text-indent: 40px;
 }
 .v3_16 {
-  width: 465px;
+  width: 90px;
   height: 62px;
   background: rgb(250, 250, 250);
   font-size: 24px;
   opacity: 1;
   position: absolute;
-  top: 559px;
-  left: 562px;
+  top: 459px;
+  left: 380px;
   border-color: transparent;
-  border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
-  text-indent: 40px;
 }
 .v3_17 {
-  color: black;
-  width: 465px;
-  height: 62px;
-  background: rgb(250, 250, 250);
-  font-size: 24px;
+  color: aliceblue;
+  width: 100px;
+  height: 60px;
+  background: rgb(241, 76, 76);
+  font-size: 19px;
   opacity: 1;
   position: absolute;
-  top: 359px;
-  left: 562px;
+  top: 463px;
+  left: 520px;
   border-color: transparent;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
-  text-indent: 40px;
+}
+.v3_17:hover {
+  color: aliceblue;
+  width: 100px;
+  height: 60px;
+  background: rgb(238, 56, 56);
+  font-size: 19px;
+  opacity: 1;
+  position: absolute;
+  top: 463px;
+  left: 520px;
+  border-color: transparent;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
 }
 .form-container {
   border: 1px solid red;
@@ -308,6 +321,7 @@ input:focus {
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
+  position: absolute;
 }
 .player-card {
   height: 325px;
@@ -371,23 +385,37 @@ a:hover {
 }
 /* profile page */
 .profile-banner {
-  width: 1918px;
-  height: 18rem;
+  width: 1920px;
+  height: 17rem;
+  background: rgba(202, 193, 207, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.8px);
+  -webkit-backdrop-filter: blur(12.8px);
+  border: 1px solid rgba(210, 196, 231, 0.212);
+  color: aliceblue;
+  z-index: 999;
 }
 .profile-banner > img {
-  width: 1918px;
-  height: 18rem;
+  width: 570px;
+  height: 10rem;
+  margin: 50px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .profile-card {
   height: 200px;
   width: 200px;
-  /* background-color: grey; */
-  border-radius: 50%;
   position: absolute;
-  transform: translate(50%, -50%);
+  transform: translate(60%, -112%);
   /* background-image: url("https://i.imgur.com/Y2aHGkv.png"); */
   background-position-y: -60px;
   background-position-x: -20px;
+}
+.banner-bg img {
+  width: 1920px;
+  height: 17rem;
+  transform: translate(-50%, -100%);
+  position: fixed;
+  z-index: -10;
 }
 .info-text {
   font-size: 35px;
@@ -396,7 +424,7 @@ a:hover {
   height: 180px;
   width: 1500px;
   margin: 20px;
-  margin-left: 350px;
+  margin-left: 250px;
   border-radius: 16px;
   background: rgba(202, 193, 207, 0.2);
   border-radius: 16px;

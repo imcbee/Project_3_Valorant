@@ -130,14 +130,16 @@ export default function PlayerPage({ submitForm }) {
       <div className="profile-banner">
         <img src={submitForm.card.wide} alt="title banner" />
       </div>
+      <div className="banner-bg">
+      <img src={submitForm.card.wide} alt="title banner" />
+      </div>
       <div className="match-cards">
         <div className="info-text">
           <div className="profile-card">
             <img src={submitForm.card.small} />
           </div>
-          <div className="name"> Game Name: {submitForm.name} </div>
-          <div className="tag"> Game Tag# {submitForm.tag} </div>
-          <div className="info">Info: level:{submitForm.account_level}</div>
+          <div className="name">{submitForm.name} #{submitForm.tag} </div>
+          <div className="info">Info: Level: {submitForm.account_level}</div>
           <div className="region">Region: {submitForm.region}</div>
         </div>
       </div>
