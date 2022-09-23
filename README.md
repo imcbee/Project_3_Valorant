@@ -59,14 +59,13 @@ Val.halla is a companion application that tracks current players of the popular 
 ### Back-end and Front-end Flow-chart:
 ![Screen Shot 2022-09-22 at 8 40 18 PM](https://user-images.githubusercontent.com/107007458/191874295-a591fc79-0fc4-492e-8352-f7c4d0b1b55d.png)
 
-
 ### Front-end Wireframe:
-![Screen Shot 2022-09-22 at 8 40 50 PM](https://user-images.githubusercontent.com/107007458/191874300-fc4e6926-5504-4862-b684-ded47919e394.png)
-https://www.figma.com/file/ilU78MtjAMFDwwH662LSmx/Project-3-Valorant-Backend%2FFrontend-Flow-Chart?node-id=0%3A1
+![Screen Shot 2022-09-22 at 8 40 50 PM](https://user-images.githubusercontent.com/107007458/191874300-fc4e6926-5504-4862-b684-ded47919e394.png)\
+[Figjam Flowchart Link](https://www.figma.com/file/ilU78MtjAMFDwwH662LSmx/Project-3-Valorant-Backend%2FFrontend-Flow-Chart?node-id=0%3A1)
 
 ### Figma Webpage Designs:
-![Screen Shot 2022-09-22 at 8 51 29 PM](https://user-images.githubusercontent.com/107007458/191874773-22b892c4-5e96-46c0-a06d-e05169d11e86.png)
-https://www.figma.com/file/ifhiow51ukVmQtKclk9Bp3/val.halla?node-id=0%3A1
+![Screen Shot 2022-09-22 at 8 51 29 PM](https://user-images.githubusercontent.com/107007458/191874773-22b892c4-5e96-46c0-a06d-e05169d11e86.png)\
+[Figma Link](https://www.figma.com/file/ifhiow51ukVmQtKclk9Bp3/val.halla?node-id=0%3A1)
 
 ## Example Site Pictures:<a name="examplepictures"></a>
 ![projec 3-1](https://user-images.githubusercontent.com/107007458/191875914-1ecead79-f442-4ef4-bef3-f3307a41e4e5.png)
