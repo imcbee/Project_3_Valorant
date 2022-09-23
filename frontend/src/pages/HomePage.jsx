@@ -6,32 +6,14 @@ import React, { useEffect, useState } from "react";
 import "../styles/HomePage.css";
 import { json } from "react-router";
 
-const URL = "https://val-halla.herokuapp.com/test";
+const URL = "https://valorant-testing.herokuapp.com/test";
 
 export default function HomePage({handleChange, handleSubmit, submitForm}) {
   //pass User Auth useState into components to render data
   // Leader player state
 
   const [leaderPlayers, setLeaderPlayers] = useState([]);
-  // const [searchForm, setSearchForm] = useState(null);
-
-  // const searchPlayer = async () => {
-  //   try {
-  //     const options = {
-  //       method: "GET",
-  //       //body: json.stringify(editForm),
-  //       headers: {
-  //         "Content-Type" : "application/json"
-  //       }
-  //     }
-      
-  //     const response = await fetch()
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-
-  // }
-  // fetch from backend
+ 
   const getPlayers = async () => {
     try {
       const response = await fetch(URL);
@@ -44,14 +26,6 @@ export default function HomePage({handleChange, handleSubmit, submitForm}) {
       console.log(err);
     }
   };
-
-  //   const handleChange = (e) => {
-  //     setLeaderPlayers({ ...leaderPlayers, [e.target.name]: e.target.value });
-  //   };
-
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //   };
 
   useEffect(() => {
     getPlayers();
