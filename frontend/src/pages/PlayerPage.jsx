@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 ///
 
 const URL = "https://api.henrikdev.xyz/valorant/v1/account/";
-const database = "https://val-halla.herokuapp.com/test/profile/";
+const database = "https://valorant-testing.herokuapp.com/test/profile/";
 
 const { REACT_APP_API_KEY } = process.env;
 //console.log(URL);
@@ -131,14 +131,16 @@ export default function PlayerPage({ submitForm }) {
         <img src={submitForm.card.wide} alt="title banner" />
       </div>
       <div className="banner-bg">
-      <img src={submitForm.card.wide} alt="title banner" />
+        <img src={submitForm.card.wide} alt="title banner" />
       </div>
       <div className="match-cards">
         <div className="info-text">
           <div className="profile-card">
             <img src={submitForm.card.small} />
           </div>
-          <div className="name">{submitForm.name} #{submitForm.tag} </div>
+          <div className="name">
+            {submitForm.name} #{submitForm.tag}{" "}
+          </div>
           <div className="info">Info: Level: {submitForm.account_level}</div>
           <div className="region">Region: {submitForm.region}</div>
         </div>

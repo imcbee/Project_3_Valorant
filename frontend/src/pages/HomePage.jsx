@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/HomePage.css";
 import { json } from "react-router";
 
-const URL = "https://val-halla.herokuapp.com/test";
+const URL = "valorant-testing.herokuapp.com/test";
 
 export default function HomePage({ handleChange, handleSubmit, submitForm }) {
   //pass User Auth useState into components to render data
